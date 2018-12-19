@@ -1,0 +1,162 @@
+body,p,h1,h2,h3,h4,h5,h6,ul,dl,dd,td,input,fieldset,textarea,option,ul,li,img{ margin:0; padding:0;}
+li{list-style:none;}
+a{text-decoration:none; color:#333;}
+img{border:none; vertical-align:top; }
+a,input{outline:none;}
+h1,h2,h3,h4,h5,h6,b,strong{font-weight:100;}
+i,em{font-style:normal;}
+
+.clear{zoom:1;}
+.clear:after{content:"."; display:block; clear:both; height:0; visibility:hidden;}
+.fl{float:left;}
+.fr{float:right;}
+.banner{
+	background: url("https://www.sundan.com/public/images/41/ce/99/8b0b08e750f59efb5c03dc137a21ac49dfd9ccc6.jpg") no-repeat;
+	width: 1800px;
+	height: 600px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+#content{
+	background: #eff1f0;
+	overflow: hidden;
+	width: 100%;
+}
+/*注册*/
+.registerDiv{
+	
+	text-align: center;
+	width: 352px;
+	height: 420px;
+	background: white;
+	position: relative;
+	left: 50%;
+	top: 5%;
+	/*display: none;*/
+}
+.registerDiv p{
+	border-radius: 0;
+	border: 1px solid #e1e1e1;
+	color: black;
+	height: 40px;
+	width: 302px;
+	margin: 0 auto;
+	text-align: left;
+	background: white;
+}
+.registerDiv p input{
+	border: none;
+	height: 40px;
+	width: 260px;
+}
+.registerDiv p img{
+	height: 38px;
+}
+.registerDiv .welcome{
+	line-height: 44px;
+	border: none;
+	width: 302px;
+	
+}
+
+.registerDiv .forget{
+	height: 50px;
+	line-height: 50px;
+	font-size: 12px;
+}
+.registerDiv .forget input{
+	height: 10px;
+	width: 10px;
+}
+.registerDiv .forget a{
+	display: inline-block;
+	color: #00BBD7;
+}
+ .registerDiv .forget,.existing{
+	border: none;
+}
+.registerDiv .existing{
+	line-height: 40px;
+	font-size: 12px;
+	border: none;
+}
+.registerDiv .existing a{
+	color: #00BBD7;
+}
+.registerDiv .verification{
+	position: relative;
+}
+.registerDiv .verification b{
+	font-size: 12px;
+	border-left: 1px solid #E1E1E1;
+	left: 80px;
+	position: absolute;
+	top: 10px;
+}
+ .registerDiv .verification b .changeVer1{
+	width: 50px;
+	display: inline-block;
+	font-size: 20px;
+}
+ .registerDiv .tips1{
+	color: red;
+	border: none;
+	height: 14px;
+	font-size:12px ;
+	display: none;
+}
+
+ .registerDiv .tips2{
+	color: red;
+	border: none;
+	height: 14px;
+	font-size:12px ;
+	display: none;
+}
+ .registerDiv .tips3{
+	color: red;
+	border: none;
+	height: 14px;
+	font-size:12px ;
+	display: none;
+}
+.registerDiv .tips4{
+	color: red;
+	border: none;
+	height: 14px;
+	display: none;
+	font-size:12px ;
+}
+.registerDiv .tips1Hidden{
+	color: red;
+	border: none;
+	height: 14px;
+	font-size:12px ;
+}
+ .registerDiv .tips2Hidden{
+	color: red;
+	border: none;
+	height: 14px;
+	font-size:12px ;
+}
+.registerDiv .tips3Hidden{
+	color: red;
+	border: none;
+	height: 14px;
+	font-size:12px ;
+}
+ .registerDiv .tips4Hidden{
+	color: red;
+	border: none;
+	height: 14px;
+	font-size:12px ;
+}
+.registerDiv button{
+	border: none;
+	font-size: 16px;
+	color: white;
+	line-height: 40px;
+	width: 302px;
+	background: #00BBD7;
+	
+}

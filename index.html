@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>衣联网</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	*{margin:0;padding: 0}
+	li{list-style: none;}
+	a{text-decoration: none;}
+	img{display: block;}
+	body,html{
+		width: 100%;
+		height: 100%;
+	}
+	#nav {
+		width: 1360px;
+		height: 28px;
+		background: #ffffff;
+		margin:0 auto;
+	}
+	
+	#nav>button{
+		width: 58px;
+		height: 16px;
+		margin-top: 12px;
+		border:none;
+		border-right: 1px solid black;
+		padding: 0px;
+
+	}
+
+	#log1{
+		width: 700px;
+		height: 500px;
+		display: none;
+		position: absolute;
+		background:#ccc;
+		z-index: 6;
+
+	}
+	#log1>p{
+		width: 400px;
+		float: left;
+	}
+	#log1 #ramdon{
+		width: 50px;
+		float: left;
+	}
+	#nav ul{
+		width: 827px;
+		height: 16px;
+		margin-top: 12px;
+		margin-left: 256px;
+		display: block;
+		float: right;
+		
+	}
+
+	#nav ul li{
+		height: 16px;
+		margin:0px 10px 0px 10px;
+		float: left; 
+
+	}
+
+
+	#head{
+		width: 1360px;
+		height:148px;
+		/*background:red;*/
+		margin:0 auto;
+		position: static;
+		z-index: 10;
+	}
+	
+	#head #logo{
+		margin-top: 48px;
+		float: left;
+	}
+
+	#head #p1{
+		float: left;
+		width: 221px;
+		margin-top: 55px;
+		font-size: 22px;
+		color: #1f2234;
+		margin-left: 10px;
+
+	}
+
+	
+
+	#head span{
+		float: left;
+		height: : 5px;
+		font-size: 12px;
+		color: #adadad;
+	}
+
+
+	#head 	#head1{
+		width: 588px;
+		height: 82px;
+		margin-top: 70px;
+		margin-left: 520px;
+
+
+	}
+
+	#head input{
+		width: 496px;
+		height: 42px;
+		border:1px solid #fe3f61;
+		float: left;
+		margin-top: 48px;
+		
+
+	}
+	#head button{
+		width:88px;
+		height: 42px;
+		border:none;
+		background:#fe3f61;
+		float: left;
+		margin-top: 48px;
+		
+		
+	}
+
+	#head ul{
+		width:588px;
+		height: 21px;
+		display: block;
+		margin-top: 55px;
+		
+	
+	}
+	
+	#head ul li{
+		height: 21px;
+		margin:0px 5px 0px  5px;
+		float: left;
+	}
+
+	#head #head2{
+		width:214px;
+		height: 148px;
+		margin-left: 1146px;
+		margin-top: -120px;
+		
+		display: inline-block;
+	}
+
+
+	#head #head2 img{
+		margin-left: 35px;
+	}
+	
+	#main{
+		width: 1346px;
+		height: 585px;
+		margin: 0 auto;
+		position: relative;
+
+	}
+
+	#main ul{
+		
+		width: 1346px;
+		background: #1f2234;
+		float: left;
+	}
+
+	#main>ul>li{
+		float: left;
+		height: 43px;
+		margin: 0px 13px 0px 13px ;
+	}
+	
+	#main ul #first{
+		background: #e11639;
+	}
+
+	#main ul li a{
+		height: 43px;
+		line-height: 43px;
+		text-align: center;
+		float: left;
+		color: #fff1cc;
+		font-size: 20px;
+	}
+
+	#main ul li a:hover{
+		background: #e11639;
+	}
+	/*#main .active{background:#e11639;}*/
+
+	#main #left{
+		width: 157px;
+		height: 540px;
+		float: left;
+		
+
+	}
+
+	#main #left li{
+		width: 157px;
+		height: 132px;
+		float: left;
+	}
+
+	#main #left li a{
+		height: 132px;
+		width: 157px;
+		line-height: 132px;
+		float: left;
+		margin-left: -13px;
+	}
+
+	#main #left #last{
+		height: 274px;
+	}
+
+	#main #left  p{
+		display: block;
+		float: left;
+		
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		color: #fff;
+	}
+
+
+
+
+
+
+	#main #middle{
+		width: 228px;
+		height: 540px;
+		float: left;
+		
+	}
+
+	#main #middle li{
+		width:200px;
+		height: 132px;
+		float: left;
+	}
+
+	#main #middle li a{
+		height: 58px;
+		width: 229px;
+		line-height: 58px;
+		float: left;
+		margin-left: -13px;
+		color: #fff;
+	}
+
+
+	#main #middle li p{
+		width: 60px;
+		height: 30px;
+		float: left;
+		color: #fff;
+	}
+
+	/*轮播*/
+	#banner{
+			width: 424px;
+			height: 240px;
+			float: left;
+			position: relative;
+			overflow: hidden;
+		}
+		#banner>ul{
+			position: absolute;
+		}
+		#banner>ul>li{
+			float: left;
+			width: 424px;
+			height: 240px;
+		}
+		#banner>#dir>a{
+			width: 80px;
+			height: 40px;
+			position: absolute;
+			text-align:center;
+			line-height: 40px;
+			text-decoration: none;
+			color: #fff;
+			background: rgba(0,0,0,.5);
+			top: 50%;
+			margin-top: -20px;
+
+
+		}
+		#banner>#dir>a:nth-child(2){
+			right: 0;
+		}
+		
+
+		#btn{
+			position: absolute;
+			bottom: 10px;
+			width: 120px;
+			left: 50%;
+			margin-left: -60px;
+		}
+		#btn>a{
+			float: left;
+			width: 15px;
+			height: 15px;
+			background:#000;
+			border-radius: 50%;
+			margin-left: 10px;
+		}
+		#btn>.active{
+			background-color: #c33;
+		}
+		
+
+		#main #img1{
+			width: 212px;
+			height: 240px;
+			
+			position: relative;
+			float: left;
+			
+		}
+		#main #img3{
+			width: 717px;
+			height: 269px;
+			position: relative;
+			float: left;
+
+			/*margin-top: 313px;*/
+		}
+		#main #img3 img{
+			width: 212px;
+			height: 240px;
+			/*margin-left:807px;*/
+			float: left;
+			
+		}
+
+		#mainright{
+			width: 244px;
+			height: 539px;
+			background: red;
+			float: left;
+			position: relative;
+			margin-top: -240px;
+		}
+		#mainright>#mainrighttop{
+			height: 145px;
+			float: left;
+		}
+	    #mainright>#mainrighttop>p{
+			width: 244px;
+			height: 90px;
+			line-height: 90px;
+			text-align: center;
+		}
+	    #mainright>#mainrighttop>button{
+			width: 77px;
+			height: 56px;
+			border: 0;
+
+		}
+
+		#mainright>#mainrightmid{
+			height: 262px;
+			float: left;
+		}
+
+	    #mainright>#mainrightmid>button{
+			width: 30px;
+			height: 33px;
+			float: left;
+			margin-left: 3px;
+			margin-top: 40px;
+
+		}
+	    #mainright>#mainrightmid>p{
+			width: 244px;
+			height: 53px;
+			line-height: 53px;
+			text-align: center;
+			float: left;
+		}
+
+		#center{
+			width: 1352px;
+			height: 428px;
+			margin:0 auto;
+			
+
+		}
+
+		#center #top{
+			width: 1352px;
+			height: 82px;
+			line-height: 82px;
+			float: left;
+
+		}
+		#center #top p{
+			float: left;
+
+			font-size: 38px;
+		}
+		#center #top button{
+			float: left;
+			margin-top: 26px;
+			width: 30px;
+			height: 30px;
+		}
+
+		#center #centercon{
+			width: 1352px;
+			height: 356px;
+			float: left;
+			overflow: hidden;
+			list-style: none;
+
+		}
+		#center #centercon li{
+			width: 299px;
+			height: 349px;
+			float: left;
+			margin-top: 10px;
+		}
+		/*#center #centercon img{
+			width: 283px;
+			height: 233px;
+			float: left;
+		}
+		#center #centercon title{
+			width: 283px;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			float: left;
+		}
+		#center #centercon p{
+			width: 283px;
+			height: 34px;
+			line-height: 34px;
+			text-align: center;
+			float: left;
+
+		}*/
+	  #second{
+			width: 1352px;
+			height: 349px;
+			
+			margin-top: 10px;
+			margin:0 auto;
+		}
+		#second>ul{
+			width: 1346px;
+			height: 384px;
+			float: left;
+
+		}
+		#second>ul>li{
+			width: 220px;
+			height: 384px;
+			float: left;
+			
+
+		}
+		#second>ul>li>#banner1{
+			width: 220px;
+			height: 384px;
+			float: left;
+			position: relative;
+			overflow: hidden;
+
+		}
+
+		#second>ul>li>#banner1>ul{
+			width: 220px;
+			height: 384px;
+			float: left;
+			position: absolute;
+			
+		
+
+		}
+		#second>ul>li>#banner1>ul>li{
+			width: 220px;
+			height: 100px;
+			float: left;
+			
+			
+
+		}
+		 #third{
+			width: 1352px;
+			height: 285px;
+			
+			margin-top: 10px;
+			margin:0 auto;
+		}
+		#third>div{
+			width: 335px;
+			height: 285px;
+			float: left;
+		}
+
+
+
+
+		#store{
+			width: 1352px;
+			height: 600px;
+			margin: 0 auto;
+		}
+
+		#store>p{
+			height: 87px;
+			/*line-height: 87px;*/
+			text-align: center;
+			font-size: 35px;
+		}
+		#store>div{
+			width: 450px;
+			height: 515px;
+			float: left;
+			position: relative;
+		}
+		#store #box1{
+			background:url(img/bg1.jpg) no-repeat;
+		}
+		#store #box2{
+			background:url(img/bg2.jpg) no-repeat;
+		}
+		#store #box3{
+			background:url(img/bg3.jpg) no-repeat;
+		}
+		#store div>#div1{
+			width: 207px;
+			height: 297px;
+			background:white;
+			float: left;
+			position: absolute;
+			top: 200px;
+			opacity: 0.75;
+		}
+		#store div>#div2{
+			width: 207px;
+			height: 297px;
+			background:white;
+			float: left;
+			position: absolute;
+			top: 200px;
+			left: 207px;
+			opacity: 0.75;
+		}
+		
+		#store>div>p{
+			margin-top: 35px;
+			font-size: 17px;
+			color: white;
+		}
+		#store>div>span{
+			margin-top: 70px;
+			font-size: 15px;
+			color: white;
+		}
+		
+		#store div>#div1>#div3{
+			width: 205px;
+			height: 200px;
+			position: absolute;
+			top: 96px;
+			display: none;
+		
+		}
+		#store div>#div1>#div4{
+			width: 205px;
+			height: 200px;
+			top: 96px;
+			position: absolute;
+		}
+
+		#store div>#div2>#div5{
+			width: 205px;
+			height: 200px;
+			position: absolute;
+			top: 96px;
+			display: none;
+		
+		}
+		#store div>#div2>#div6{
+			width: 205px;
+			height: 200px;
+			top: 96px;
+			position: absolute;
+		}
+		#pubuliu{
+			width: 1359px;
+			height: 4519px;
+			margin: 0 auto;
+			position: relative;
+		}
+		#pubuliu>div{
+		width: 312px;
+		height: 431px;
+		border: 1px solid #000;
+		float: left;
+	}
+	#pubuliu>div>img{
+		width: 100%;
+
+	}
+
+	#secondnav{
+		width: 450px;
+		height: 450px;
+		position: absolute;
+		left: 157px;
+		top:43px;
+		background: #000;
+		float: left;
+		display: none;
+		z-index: 5;
+
+	}
+	#secondnav>ul{
+		width: 150px;
+		height: 150px;
+		float: left;
+		color: white;
+
+	}
+	#bottom{
+		width: 1815px;
+		height: 516px;
+		margin:0 auto;
+		background: #292a2c;
+	}
+	#bottomcon{
+		width: 1356px;
+		height: 232px;
+		margin:0 auto;
+	}
+    #bottomcon>ul{
+		width: 236px;
+		height: 232px;
+		float: left;
+		
+	}
+	#bottomcon>ul>li{
+		width: 236px;
+		height: 25px;
+		float: left;
+		
+		
+	}
+	#bottomcon>ul>li>a{
+		width: 236px;
+		height: 25px;
+		line-height: 69px;
+		text-align: center;
+		color: #6b8b99;
+		float: left;
+		font-size: 12px;
+	}
+	#buttoncon1{
+		width: 1356px;
+		height: 46px;
+		margin:0 auto;
+
+	}
+	#buttoncon1>ul{
+		width: 1356px;
+		
+		float: left;
+	}
+
+	#buttoncon1>ul>li{
+		
+		height: 46px;
+		float: left;
+	}
+	#buttoncon1>ul>li>a{
+		height: 36px;
+		line-height: 36px;
+		padding-left: 5px;
+		padding-right: 5px;
+		
+		font-size: 15px;
+		float: left;
+		color: #475c51;
+		border-right: 1px solid #475c51;
+	}
+	#buttoncon1>div{
+		width: 1162px;
+		margin:0 auto;
+	}
+	#buttoncon1>div{
+		width: 1166px;
+		margin:0 auto;
+		float: left;
+	}
+	#buttoncon1>div>li{
+		height: 34px;
+		float: left;
+		margin-right: 10px;
+		opacity: 0.3;
+	}
+	#buttoncon1>div>li:hover{
+		opacity:1;
+	}
+	#youbian{
+		width: 50px;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		right: 0px;
+		background:black;
+	}
+	#youbian>ul{
+		width: 50px;
+		position: relative;
+		top: 150px;
+		right: 0px;
+		float: left;
+	}
+	#youbian>ul>li{
+		width: 50px;
+
+		height: 40px;
+		position: relative;
+		margin-top: 10px;
+		float: left;
+	}
+	#youbian>ul>li>img{
+		width: 40px;
+		height: 40px;
+	}
+	
+	
+	
+
+	#youbian #t{
+		width: 50px;
+		height:50px;
+		position: fixed;
+	
+		right: 0px;
+		background:red;
+		bottom: 0px;
+
+	}
+	#speed{
+		width: 100px;
+		height: 50px;
+		background: blue;
+		display: none;
+		position: absolute;
+		top:150px;
+		right: 200px;
+
+	}
+
+
+	#sale{
+		width: 1356px;
+		height: 688px;
+		margin: 0 auto;
+		margin-top: 10px;
+
+	}
+	#sale>p{
+		height: 125px;
+		line-height: 125px;
+		text-align:center;
+		display: block;
+		font-size: 30px;
+		
+
+	}
+	#sale>#sale-img{
+		width: 224px;
+		height: 559px;
+		float: left;
+	}
+	#sale>ul{
+		height: 490px;
+		line-height: 100px;
+		float: left;
+		margin-left: 350px;
+	}
+	#sale>ul>li{
+		float: left;
+		margin-right: 30px;
+	}
+	#sale>ul>li>a{
+		height: 100%;
+		width: 100%;
+		float: left;
+	}
+	#sale>#sale-main{
+		width: 842px;
+		height: 504px;
+		position: absolute;
+		margin:0 auto;
+		top:2687px;
+		left: 335px;
+	}
+	#sale>#sale-main>.good{
+		width: 421px;
+		height: 168px;
+		float: left;
+	}
+	#sale>#sale-main>.good>img{
+		width: 168px;
+		float: left;
+	}
+	#sale>#sale-main>.good>p{
+
+		width: 250px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		float: left;
+	}
+	#sale>#sale-main>.good>span{
+
+		width: 250px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+		float: left;
+	}
+	
+	
+	
+	</style>
+</head>
+<body>
+	<div id="nav">
+		hi,欢迎来到衣联
+		<button type="text" value="" id="log">请登录</button>
+		<button type="text" value="" id="zhuce">免费注册</button>
+		<ul>
+			<li><a href="#">衣联首页</a></li>
+			<li><a href="#">我的衣联</a></li>
+			<li><a href="#">进货车</a></li>
+			<li><a href="#">收藏夹</a></li>
+			<li><a href="#">在线客服</a></li>
+			<li><a href="#">手机逛衣联</a></li>
+			<li><a href="#">网站导航</a></li>
+			<li><a href="#">供应商入住</a></li>
+
+		</ul>
+	</div>
+	<div id="log1">
+		<p>手机号：<input type="text" id="phone" placeholder="请输入手机号"></p>
+		<p>密码：<input type="password" id="password" placeholder="请输入密码"></p>
+		<p>确认密码：<input type="password" id="repassword" placeholder="请确认密码"></p>
+		<p>验证码：<input type="text" id="yanzhengma"><div id="ramdon"></div></p>
+
+
+	</div>
+	<div id="head">
+		<img src="img/logo.jpg" id="logo">
+		<p id="p1">服装批发新的领航者<span>eelly.com</span></p>
+		<div id="head1">
+		<input type="text" >
+		<button>搜索</button>
+		<ul>
+			<li ><a href="">衣联直播中心</a></li>
+			<li><a href="">连衣裙</a></li>
+			<li><a href="">半身裙</a></li>
+			<li><a href="">衬衫</a></li>
+			<li><a href="">时尚套装</a></li>
+			<li><a href="">男衬衫</a></li>
+			<li><a href="">牛仔裤</a></li>
+			<li><a href="">看直播</a></li>
+		</ul>
+		</div>
+		<div id="head2">
+		<img src="img/ma1.jpg">
+		<p>下载APP，随时看30万新款</p>
+		</div>
+	</div>
+
+	<div id="main">
+		<ul>
+			<li id="first"><a href="#">全部商品分类</a></li>
+			<li><a href="#">女装</a></li>
+			<li><a href="#">男装</a></li>
+			<li><a href="#">童装</a></li>
+			<li><a href="#">内衣</a></li>
+			<li><a href="#">鞋子</a></li>
+			<li><a href="#">箱包</a></li>
+			<li><a href="#">衣饰</a></li>
+			<li><a href="#">衣联直播</a></li>
+			<li><a href="#">游论坛</a></li>
+			<li><a href="#">产业服务</a></li>
+			<li><a href="#">批发商免费入住</a></li>
+		</ul>
+
+
+		<ul id="left">
+			<li><a href="#">热门类目</a></li>
+			<li id="erji"><a href="#">批发市场</a></li>
+			<li id="last"><a href="#">活动</a>
+				<p>实体档口好货</p>
+				<p>衣联直播中心</p>
+				<p>潮流卫衣</p></br>
+				<p>半身裙</p>
+				<p>百搭牛仔裤</p>
+			</li>
+		</ul>
+			<div id="secondnav">
+				<ul>
+					<h3>十三行</h3>
+					<li>P&H旗舰店 御劲国际</li>
+					<li>莹莹B2561档</li>
+					<li>瑞桑优品旗舰店</li>
+				</ul>
+				<ul>
+					<h3>杭州</h3>
+					<li>口红家 DK品质女装</li>
+					<li>杭派时尚女装 迁香誉</li>
+				</ul>
+				<ul>
+					<h3>明星同款</h3>
+					<li>韩艳时尚服饰 伊人丽影</li>
+					<li>索尼娅服饰</li>
+					<li>新商贸易公司</li>
+				</ul>
+				<ul>
+					<h3>沙河</h3>
+					<li>西米服饰</li>
+					<li>Mr.S快时尚女装</li>
+					<li>大牌馆女装</li>
+				</ul>
+				<ul>
+					<h3>虎门</h3>
+					<li>桂花阁</li>
+					<li>思涵自制高端服饰</li>
+					<li>茗伊服饰 大莹家美衣馆</li>
+				</ul>
+				<ul>
+					<h3>当季精选</h3>
+					<li>绣衣坊原单工厂女装</li>
+					<li>琴维欣</li>
+					<li>米兰时尚韩版女装</li>
+				</ul>
+				<ul>
+					<h3>白马</h3>
+					<li>爱美优店服饰 大千外货</li>
+					<li>广州细分服饰</li>
+				</ul>
+				<ul>
+					<h3>广州工厂</h3>
+					<li>朵一服饰有限公司</li>
+					<li>美的服饰 麦秀</li>
+				</ul>
+				<ul>
+					<h3>义乌商贸城</h3>
+					<li>曼凡女装工厂</li>
+					<li>欧语幕服饰</li>
+				</ul>
+
+			</div>
+
+
+		<ul id="middle">
+			<li><a href="#">夏装新品</a>
+				<p>连衣裙</p>
+				<p>T恤</p>
+				<p>半身裙</p>
+				<p>衬衫</p>
+				<p>雪纺衫</p>
+				<p>牛仔裤</p>
+			</li>
+			<li><a href="#">夏装新款 男</a>
+				<p>T恤</p>
+				<p>衬衫</p>
+				<p>牛仔裤</p>
+				<p>休闲套装</p>
+				<p>运动风</p>
+			</li>
+			<li><a href="#">童装</a>
+				<p>夏装新品</p>
+				<p>童 裙子</p>
+				<p>童 T恤</p>
+				<p>童 衬衫</p>
+			</li>
+			<li><a href="#">包包 内衣 鞋靴 衣饰</a>
+				<p>文胸</p>
+				<p>家居服</p>
+				<p>斜挎包</p>
+				<p>运动鞋</p>
+				<p>手提包</p>
+			</li>
+		</ul>
+	
+		
+		<div id="banner">
+	<ul>
+		<li><img src="img/img1.jpg"></li>
+		<li><img src="img/img2.jpg"></li>
+		<li><img src="img/img3.jpg"></li>
+		<li><img src="img/img4.jpg"></li>
+		
+	</ul>
+	<div id="dir">
+		<a href="##">&lt;</a>
+		<a href="##">&gt;</a>
+	</div>
+	<div id="btn">
+		<a href="##" class="active"></a>
+		<a href="##"></a>
+		<a href="##"></a>
+		<a href="##"></a>
+		
+
+	</div>
+
+</div>
+
+		<div id="img1">
+			<img src="img/img6.jpg">
+		</div>
+		<div id="img3">
+			<img src="img/img7.jpg">
+			<img src="img/img8.jpg">
+			<img src="img/img9.jpg">
+
+		</div>
+		<div id="mainright">
+			<div id="mainrighttop">
+				<p>欢迎来到衣联网</p>
+				<button><a href="##">登录</a></button>
+				<button><a href="##">注册</a></button>
+				<button><a href="##">免费入驻</a></button>
+			</div>
+			<div id="mainrightmid">
+				<button><a href="##">2</a></button>
+				<button><a href="##">2</a></button>
+				<button><a href="##">3</a></button>
+				<button><a href="##">4</a></button>
+				<button><a href="##">1</a></button>
+				<button><a href="##">3</a></button>
+				<button><a href="##">9</a></button>
+				<p>服装采购商的选择</p>
+			</div>
+			<div id="mainrightbot">
+				<p>平台公告</p>
+				<ul>
+					<li><a href="##"></a></li>
+					<li><a href="##"></a></li>
+					<li><a href="##"></a></li>
+					<li><a href="##"></a></li>
+				</ul>
+			</div>
+
+
+		</div>
+
+
+	</div>
+
+
+	<div id="center">
+		<div id="top">
+			<p>衣联直播中心</p>
+			<button id="value1">1</button><p>月</p><button id="value2">1</button>
+		</div>
+		<div id="centercon">
+
+		</div>
+		
+	</div>
+	<div id="second">
+		<ul>
+			<li><img src="img/img14.jpg"><p>新商贸公司</p></li>
+			<li><img src="img/img15.jpg"><p>李秀珍的店</p></li>
+			<li><img src="img/img16.jpg"><p>广州佩雪叶电子商务</p></li>
+			<li><img src="img/img17.jpg"><p>伊芙丽</p></li>
+			<li><img src="img/img18.jpg"><p>非凡服饰</p></li>
+			<li>
+				<div id="banner1">
+					<ul>
+						<li>走货</li>
+						<li>美丽人生旗舰店</li>
+						<li>广州市好亮服饰有限公司</li>
+						<li>紧姿服饰</li>
+						<li>简约女装</li>
+					</ul>
+				</div>
+			</li>
+
+		</ul>
+
+	</div>
+	<div id="third">
+		<div><img src="img/img10.jpg"></div>	
+		<div><img src="img/img11.jpg"></div>	
+		<div><img src="img/img12.jpg"></div>	
+		<div><img src="img/img13.jpg"></div>		
+	
+	</div>
+	<div id="store">
+		<p>精选市场</p>
+		<div id="box1">
+			<p>广州市红遍天服装交易中心</p>
+			<span>位于新中国大厦的后面，主营主要日韩女装，瑞丽杂志款。货品档次跟新中国一到三楼的货品类似</span>
+			<div id="div1">
+				<p>米兰街</p>
+				<p>均价￥5549/1625人收藏</p>
+			
+				<div id="div3">广州红遍天</div>
+				<div id="div4"><img src="img/img19.jpg"></div>
+				
+			</div>
+			<div id="div2">
+				<p>米兰街</p>
+				<p>均价￥5549/1625人收藏</p>
+				
+				<div id="div5">广州红遍天</div>
+				<div id="div6"><img src="img/img19.jpg"></div>
+				
+			</div>
+		</div>
+	</div>
+	<div id="sale">
+		<p>热销好卖</p>
+		<img src="img/saleimg.jpg" id="sale-img">
+		<ul>
+			<li><a href="##">时尚套装</a></li>
+			<li><a href="##">优质精品</a></li>
+			<li><a href="##">日韩女装</a></li>
+			<li><a href="##">档口爆版</a></li>
+			<li><a href="##">厂家好货</a></li>
+		</ul>
+		<div id="sale-main">
+				<!-- <div class="good">
+					<img src="img/salemain1.jpg">
+					<p>新商贸易公司</p>
+					<span>￥81.03</span>
+				</div> -->
+		</div>
+
+	</div>
+
+	<div id="pubuliu">
+		<!-- <div id="con">
+			<img src="img/img/38.jpg" class="pubuliuimg1">
+			<p>￥81.03</p>
+			<span>打包</span>
+			<b>华伊格 2018春秋新款休闲先搜长</b>
+		</div> -->
+		
+	</div>
+
+
+<div id="bottom">
+	<div id="bottomcon">
+		<ul>
+			<li><a href="##">新手指南</a></li>
+			<li><a href="##">账户注册</a></li>
+			<li><a href="##">买家入门</a></li>
+			<li><a href="##">卖家专区</a></li>
+			<li><a href="##">常见问题</a></li>
+		</ul>
+		<ul>
+			<li><a href="##">支付方式</a></li>
+			<li><a href="##">付款方式</a></li>
+			<li><a href="##">网银支付</a></li>
+			<li><a href="##">银联支付</a></li>
+			<li><a href="##">支付宝支付</a></li>
+		</ul>
+		<ul>
+			<li><a href="##">交易保障</a></li>
+			<li><a href="##">诚信保障</a></li>
+			<li><a href="##">包退包换</a></li>
+			<li><a href="##">准时发货</a></li>
+			<li><a href="##">实拍认证</a></li>
+		</ul>
+		<ul>
+			<li><a href="##">投诉维权</a></li>
+			<li><a href="##">仲裁管理</a></li>
+			<li><a href="##">举报管理</a></li>
+			<li><a href="##">投诉管理</a></li>
+			<li><a href="##">退货退款</a></li>
+		</ul>
+		<ul>
+			<li><a href="##">商家服务</a></li>
+			<li><a href="##">开店管理</a></li>
+			<li><a href="##">商家入驻</a></li>
+			<li><a href="##">商家认证</a></li>
+			<li><a href="##">商家提现</a></li>
+		</ul>
+
+	</div>
+	<div id="buttoncon1">
+		<ul>
+			<li><a href="##">部门分类：</a></li>
+			<li><a href="##">长袖T恤</a></li>
+			<li><a href="##">广东童装批发</a></li>
+			<li><a href="##">情侣装外套</a></li>
+			<li><a href="##">黑色连衣裙</a></li>
+			<li><a href="##">秋装新款连衣裙</a></li>
+			<li><a href="##">韩版时尚男装</a></li>
+			<li><a href="##">女风衣外套</a></li>
+			<li><a href="##">秋装连衣裙</a></li>
+			<li><a href="##">韩版修身牛仔裤</a></li>
+			<li><a href="##">儿童服装</a></li>
+			<li><a href="##">女款卫衣</a></li>
+			<li><a href="##">紧身裤</a></li>
+			<li><a href="##">打底衫长款</a></li>
+			<li><a href="##">服装店铺排行</a></li>
+
+		</ul>
+	    <ul>
+	    	<li><a href="##">友情链接：</a></li>
+	    	<li><a href="##">QQ：33103-88253</a></li>
+	    	<li><a href="##">慧聪网</a></li>
+	    	<li><a href="##">中国建材网</a></li>
+	    	<li><a href="##">中国女装网</a></li>
+	    	<li><a href="##">结婚装修</a></li>
+	    	<li><a href="##">亲亲宝贝网</a></li>
+	    	<li><a href="##">爱靓网时尚女装</a></li>
+	    	<li><a href="##">中商情报网</a></li>
+	    	<li><a href="##">亿邦动力网 </a></li>
+	    	<li><a href="##">加盟网</a></li>
+	    	<li><a href="##">黄页88网</a></li>
+	    	<li><a href="##">品牌</a></li>
+	    	<li><a href="##">播视网视频</a></li>
+	    	<li><a href="##">结婚网</a></li>
+	    	<li><a href="##">微商代理</a></li>
+	    	<li><a href="##">搜了网</a></li>
+	    	<li><a href="##">中国丽人网</a></li>
+	    	<li><a href="##">全球纺织网</a></li>
+	    	<li><a href="##">手表品牌排行榜</a></li>
+	    	<li><a href="##">连锁加盟网</a></li>
+	    	<li><a href="##">婚戒</a></li>
+	    	<li><a href="##">时尚</a></li>
+	    	<li><a href="##">家具</a></li>
+	    	<li><a href="##">设计图片</a></li>
+	    	<li><a href="##">发型</a></li>
+	    	<li><a href="##">b2b</a></li>
+	    	<li><a href="##">中国时尚新媒体</a></li>
+	    	<li><a href="##">微商货源网</a></li>
+	    	<li><a href="##">更多</a></li>
+	    	<li><a href="##">返利网</a></li>
+	    	<li><a href="##">跨境电商</a></li>
+	    </ul>
+	    <ul>
+			<li><a href="##">关于衣联</a></li>
+			<li><a href="##">衣联动态</a></li>
+			<li><a href="##">衣联招聘</a></li>
+			<li><a href="##">免费开店</a></li>
+			<li><a href="##">合作伙伴</a></li>
+			<li><a href="##">联系衣联</a></li>
+	    </ul>
+		<ul>
+			<li><a href="##">Copyright&copy2003-2018 Eelly.com All Reserved.广州市衣联网络科技有限公司</a></li>
+			<li><a href="##">版权所有 隐私声明</a></li>
+			<li><a href="##">粤ICP备10209547号</a></li>
+			<li><a href="##">公安备案号44010402000492</a></li>
+		</ul>
+		<div >
+			<li><img src="img/b1.png"></li>
+			<li><img src="img/b2.png"></li>
+			<li><img src="img/b3.png"></li>
+			<li><img src="img/b4.png"></li>
+			<li><img src="img/b5.png"></li>
+			<li><img src="img/b6.png"></li>
+			<li><img src="img/b7.png"></li>
+			<li><img src="img/b8.png"></li>
+			<li><img src="img/b9.png"></li>
+			<li><img src="img/b10.png"></li>
+			<li><img src="img/b11.png"></li>
+			<li><img src="img/b12.png"></li>
+			<li><img src="img/b13.jpg"></li>
+	    </div>	
+	</div>
+</div>
+<div id="youbian">
+		<ul id="r">
+			<li><img src="img/r1.jpg" class="img"></li>
+			<li><img src="img/r2.jpg" class="img"></li>
+			<li><img src="img/r3.jpg" class="img"></li>
+			<li><img src="img/r4.jpg" class="img"></li>
+			<li><img src="img/r5.jpg" class="img"></li>
+			<li><img src="img/r6.jpg" class="img"></li>
+			<li><img src="img/r7.jpg" class="img"></li>
+		</ul>
+
+		<div id="t">top</div>
+		
+</div>
+<div id="speed">我的账户</div>
+</body>
+</html>
+<script type="text/javascript" src="ownpool.js"></script>
+<script type="text/javascript">
+// 运用事件代理实现鼠标滑过的效果
+// var oul1=document.querySelector("#main>ul");
+// var oli1=document.querySelectorAll("#main>ul>li");
+// oul1.onmouseover = function(e){
+// 		var e = e||event;
+// 		var target = e.target || e.srcElement;
+// 		for(var i=0;i<this.children.length;i++){
+// 			this.children[i].className = ""
+// 		}
+// 		target.className = "active";
+// 	}
+// oul1.onmouseout = function(e){
+// 		var e = e||event;
+// 		var target = e.target || e.srcElement;
+// 		for(var i=0;i<this.children.length;i++){
+// 			this.children[i].className = ""
+// 		}
+		
+// 	}	
+// 二级菜单
+
+var erji=document.getElementById("erji");
+var secondnav=document.getElementById("secondnav");
+erji.onmouseover=function(){
+	secondnav.style.display="block";
+}
+erji.onmouseout=function(){
+	secondnav.style.display="none";
+}
+
+// 横向轮播
+// 能不用queryselector就不用
+function fn(){
+var obanner=document.getElementById("banner");
+var oul=document.querySelector("#banner>ul");
+var oli=oul.getElementsByTagName("li");
+var odir=document.querySelectorAll("#dir>a");
+var obtn=document.querySelectorAll("#btn>a");
+var inow=0;
+var iwidth=oli[0].offsetWidth;
+// 添加一个li然后追加到后面
+var li=oli[0].cloneNode(true);
+oul.appendChild(li);
+var timer=null;
+oul.style.width=iwidth*oli.length+"px";
+
+
+for(var i=0;i<obtn.length;i++){
+	obtn[i].index=i;
+	obtn[i].onmouseover=function(){
+		for(var j=0;j<obtn.length;j++){
+			obtn[j].className=""
+		}
+		this.className="active";
+		inow=this.index;
+		toimg();
+	}
+}
+odir[0].onclick=function(){
+	// 如果是第一张图片，点击按钮需要返回到最后一张 ul距离左边的宽度改变
+	if(inow==0){
+		inow=oli.length-2
+		oul.style.left=-(oli.length-1)*oli[0].offsetWidth+"px";
+	}else{
+		inow--;
+	}
+	toimg();
+}
+// 如果是最后一张图片，就让放第二张图片，左边距离改成0
+odir[1].onclick=function(){
+	if(inow==oli.length-1){
+		inow=1;
+		oul.style.left=0;
+	}else{
+		inow++;
+	}
+	toimg();
+}
+// 做轮播图之前一定要先做一个鼠标移入停止轮播移出继续轮播
+obanner.onmouseover=function(){
+	clearInterval(timer)
+}
+obanner.onmouseout=function(){
+	autoplay()
+}
+autoplay()
+function autoplay(){
+	timer=setInterval(function(){
+		if(inow==oli.length-1){
+			inow=1;
+			oul.style.left=0;
+		}else{
+			inow++;
+		}
+		toimg();
+	},2000)
+}
+// 轮播的原理
+function toimg(){
+	move(oul,{left:-inow*iwidth})
+	for(var i=0;i<obtn.length;i++){
+		obtn[i].className="";
+	}
+	obtn[inow==oli.length-1?0:inow].className="active";
+}
+}
+fn();
+// 纵向轮播
+// 能不用queryselector就不用
+function fn1(){
+var obanner1=document.getElementById("banner1");
+// console.log(obanner1)
+var oul1=obanner1.querySelector("ul");
+// console.log(oul1)
+var oli1=oul1.getElementsByTagName("li");
+// console.log(oli1)
+var inow=0;
+var iHeight=oli1[0].offsetHeight;
+// console.log(iHeight)
+// 添加一个li然后追加到后面
+var li=oli1[0].cloneNode(true);
+oul1.appendChild(li);
+var timer=null;
+oul1.style.height=iHeight*oli1.length+"px";
+// 做轮播图之前一定要先做一个鼠标移入停止轮播移出继续轮播
+obanner1.onmouseover=function(){
+	clearInterval(timer)
+}
+obanner1.onmouseout=function(){
+	autoplay()
+}
+autoplay()
+function autoplay(){
+	timer=setInterval(function(){
+		if(inow==oli1.length-1){
+			inow=1;
+			oul1.style.top=0;
+		}else{
+			inow++;
+		}
+		toimg();
+	},2000)
+}
+// 轮播的原理
+function toimg(){
+	move(oul1,{top:-inow*iHeight})
+	// for(var i=0;i<obtn.length;i++){
+	// 	obtn[i].className="";
+	// }
+	// obtn[inow==oli.length-1?0:inow].className="active";
+}
+}
+fn1();
+// 吸顶
+	// var oNav = document.getElementById("head");
+	// window.onscroll = function () {
+	// 	var sTop = document.documentElement.scrollTop || document.body.scrollTop;
+	// 	if(sTop>=200){
+	// 		oNav.style.position = "fixed";
+	// 		oNav.style.top = 0;
+
+	// 		p1.style.display = "none";
+	// 		head2.style.display = "none";
+	// 		// oNav.style.margin-top = 0;
+	// 		// oNav.style.height=50+"px";
+
+	// 	}else{
+	// 		oNav.style.position = "static";
+	// 		p1.style.display = "block";
+	// 		head2.style.display = "block";
+	// 	}
+	// }
+
+
+	// 智能显示
+	var otop = document.getElementById("top");
+	var avalue1 = document.getElementById("value1");
+	var avalue2= document.getElementById("value2");
+	var fn=function(){
+	var d = new Date();
+	var m = d.getMonth();
+	var r = d.getDate();
+	
+	avalue1.innerHTML=m+1;
+	avalue2.innerHTML=r;
+
+}
+
+	fn();
+
+// 数组对象循环
+	var obj=[
+		{
+			img:"img/img1.jpg",
+			title:"裂彩品牌馆",
+			p:"广州十三行新中国",
+		},
+		{
+			img:"img/img1.jpg",
+			title:"裂彩品牌馆",
+			p:"广州十三行新中国",
+		},
+		{
+			img:"img/img1.jpg",
+			title:"裂彩品牌馆",
+			p:"广州十三行新中国",
+		},
+		{
+			img:"img/img1.jpg",
+			title:"裂彩品牌馆",
+			p:"广州十三行新中国",
+		},
+		{
+			img:"img/img1.jpg",
+			title:"裂彩品牌馆",
+			p:"广州十三行新中国",
+		},
+
+	]
+	var str = "";
+	for(var i=0;i<obj.length;i++){
+	str+="<li><img src="+obj[i].img+"><p>"+obj[i].title+"</p><p>"+obj[i].p+"</p></li>";
+}
+
+centercon.innerHTML = str;
+
+// 点击滑动效果
+var div3=document.getElementById("div3");
+var div4=document.getElementById("div4")
+
+div4.onmouseover=function(){
+	div3.style.display="block";
+	div4.style.top=112+"px";
+}
+var div5=document.getElementById("div5");
+var div6=document.getElementById("div6")
+
+div6.onmouseover=function(){
+	div5.style.display="block";
+	div6.style.top=112+"px";
+}
+
+// div6.onmouseout=function(){
+// 	div5.style.display="block";
+// 	div6.style.top=96px;
+// }
+
+// 回到顶部
+// 找到dom元素 当我点击t的时候，滑动到顶端
+var t  = document.getElementById("t");
+window.onscroll=function(){
+	var sTop=document.documentElement.scrollTop||document.body.scrollTop;
+	
+	t.onclick=function(){
+		document.documentElement.scrollTop=document.body.scrollTop=0;
+	}
+}
+// 点击登录注册，弹出登录注册框
+var log = document.getElementById("log"); 
+var zhuce = document.getElementById("zhuce");
+var log1 = document.getElementById("log1"); 
+log.onclick=function(){
+	log1.style.display="block";
+}
+
+// 进行验证
+// 验证手机号一共十一位，以13 18 15 17 开头
+var phone1=document.getElementById("phone");
+	// console.log(name1);
+phone1.onblur=function(){
+var phone2=phone1.value;
+var reg=phone2;
+if(/^(13|18|15|17)\d{9}$/g.test(reg)){
+	alert("手机号输入有效");}
+	else{
+		alert("手机号输入无效");
+		}
+}
+// 验证密码 密码有效是6-16位
+	var password1=document.getElementById("password");
+	// console.log(password);
+	password1.onblur=function(){
+	var passvalue=password1.value;
+	var reg=passvalue;
+	if(/^[a-zA-Z0-9]{5,15}$/g.test(reg)){
+		alert("输入正确");}
+		else{
+			alert("输入错误");
+		}
+	}
+	// 验证确认密码 密码有效是6-16位，如果这个输入框和上一个框输入相同 弹出输入正确
+	var repassword=document.getElementById("repassword");
+	var password1=document.getElementById("password");
+	// console.log(password);
+	repassword.onblur=function(){
+		var n=password1.value;
+		var m=repassword.value;
+		if(n==m){
+			alert("两次密码相同，密码确定")
+		}else{
+			alert("重新确定密码")
+		}
+	}
+	//随机生成验证码 随机生成
+var ramdon = document.getElementById("ramdon");
+var yanzhengma = document.getElementById("yanzhengma");
+    var num = randomCode(4);
+    ramdon.innerHTML = num;	
+    //点击生成新的验证码
+    ramdon.onclick = function(){
+        var newNum = randomCode(4);
+        num = newNum;
+        ramdon.innerHTML = num;
+    }
+    yanzhengma.onblur=function(){
+		var n =ramdon.innerHTML ;
+		var  m=yanzhengma.value;
+		if(n==m){
+			alert("验证码正确")
+		}else{
+			alert("验证码错误")
+		}
+	}
+	// 右边的效果 写一个构造函数进行调用，构造函数中有两个参数，一个是鼠标滑过的li，一个是对应的效果
+	var oul1=document.getElementById("r");
+
+	oul1.onmouseover=function(e){
+		var e=e||event;
+		var target=e.target||e.srcElement;
+		if(target.className=="img"){
+			target.parentNode.style.background="red";
+			var speed = document.getElementById("speed");
+			var iWidth = document.documentElement.clientWidth - speed.offsetWidth-50;
+			var l = 10;
+			var timer = null;
+				speed.style.display="block";
+				clearInterval(timer);
+				timer = setInterval(function(){
+					if(speed.offsetLeft>=iWidth-100){
+						clearInterval(timer)
+					}else{
+						speed.style.left = speed.offsetLeft + l+"px";
+						
+					}
+					
+				},30)
+	}
+}
+	oul1.onmouseout=function(e){
+		var e=e||event;
+		var target=e.target||e.srcElement;
+		
+		if(target.className=="img"){
+			var speed = document.getElementById("speed");
+			target.parentNode.style.background="";
+			
+			speed.style.display="none";
+		}
+	}
+
+// ajax
+function ajax(options){
+	//创建一个ajax对象
+	var xhr = new XMLHttpRequest() || new ActiveXObject("Microsoft,XMLHTTP");
+
+	//数据的处理  {a:1,b:2}  a=1&b=2;
+	var str = "";
+	for(var key in options.data){
+		str+="&"+key+"="+options.data[key];
+	}
+
+	str = str.slice(1)
+	if(options.type == "get"){
+		var url = options.url+"?"+str;
+
+		xhr.open("get",url);
+
+		xhr.send();
+
+	}else{
+		xhr.open("post",options.url);
+
+		xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+
+		xhr.send(str)
+
+	}
+
+	//监听
+	xhr.onreadystatechange = function(){
+		//当请求成功的时候
+		if(xhr.readyState == 4 && xhr.status == 200){
+
+			var d = xhr.responseText;
+
+			//将请求的数据传递给成功回调函数
+			options.success&&options.success(d)
+
+		}else if(xhr.status != 200){
+			//当失败的时候将服务器的状态传递给失败的回调函数
+			options.error&&options.error(xhr.status);
+		}
+	}
+}
+// 利用ajax进行数据渲染
+// 因为ajax是异步事件，如果有两个json，需要两个ajax引入，两个异步事件的执行顺序会有问题，所以变成同步事件
+
+function a(url){
+	if(url=="index.json"){
+		var str = "";
+		var sale= document.getElementById("sale-main");
+	ajax({
+		// 用get方式将index.json中的数据取到，如果成功则先把数组对象转换成字符串，将json中的数据进行遍历，渲染到界面上
+			type: "get",
+			url: "index.json",
+			data: {},
+			success: function(data) {
+						    
+				//		    var a=data.length;
+				var  data = JSON.parse(data);
+				// console.log(data)
+				for(var i = 0; i < data.length; i++) {
+					str += `<div class="good">
+						<img id="${data[i].id}" src="${data[i].img} ">
+						<p>${data[i].title}</p>
+						<span>￥${data[i].pirce}</span>
+					</div>`
+				}
+				sale.innerHTML = str;
+				var img= sale.getElementsByTagName("img");
+				// 运用事件代理，点击中图时，将点击图片的id和data中的id进行对比，如果相同将herf中的id进行改变
+				sale.onclick=function(e){
+				var e=e||event;
+				var target=e.target||e.srcElement;
+			
+				for(var i=0;i<data.length;i++){
+					if(target.id==data[i].id){
+
+					 location.href="information.html?id="+target.id;
+					 break;
+					  // console.log(12)
+					
+					}
+				}
+	}
+	}})
+}
+
+if(url=="1.json"){
+	var str = "";
+	var pubuliu= document.getElementById("pubuliu");
+	ajax({
+		// 用get方式将index.json中的数据取到，如果成功则先把数组对象转换成字符串，将json中的数据进行遍历，渲染到界面上
+			type: "get",
+			url: "1.json",
+			data: {},
+			success: function(data) {
+				// console.log(data)		    
+				var  data = JSON.parse(data);
+				// console.log(data)
+				for(var i = 0; i < data.length; i++) {
+					str += `<div id="con">
+					<img src="${data[i].img} " id="${data[i].id} class="pubuliuimg1">
+					<p>￥${data[i].pirce}</p>
+					<span>${data[i].title}</span>
+					<b>${data[i].title1}</b>
+					
+				</div>`
+				}
+				pubuliu.innerHTML = str;
+		
+	}})
+}
+}
+a("index.json");
+a("1.json");
+var pubuliu= document.getElementById("pubuliu");
+pubuliu.onmouseover=function(e){
+	var e=e||event;
+	var target=e.target||e.srcElement;
+	target.style.opacity=0.5;
+
+}
+pubuliu.onmouseout=function(e){
+	var e=e||event;
+	var target=e.target||e.srcElement;
+	target.style.opacity=1;
+
+}
+
+
+</script>

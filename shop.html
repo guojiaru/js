@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>购物车</title>
+	<meta charset="utf-8">
+	<style>
+		#list {
+			width: 800px;
+			text-align: center;
+			border-spacing: 0;
+			table-layout: fixed;
+			margin: 30px auto;
+		}
+		
+		#list>tbody>tr {
+			border: 1px solid #ccc;
+			background: #f3b8b8;
+			height: 87px;
+		}
+		
+		#list>tbody>tr>td {
+			margin-left: 30px;
+			width: 20%;
+		}
+		
+		#list>tbody>tr>td>button {
+			height: 22px;
+			width: 30px;
+			font-size: 18px;
+			outline: none;
+		}
+		
+		#list>tbody>tr>td>button,
+		#list>tbody>tr>td>input {
+			border: 0;
+			float: left;
+		}
+		
+		.reduce {
+			margin-left: 30px;
+		}
+		
+		.num {
+			text-align: center;
+		}
+		
+		#list>tbody>tr>td>input {
+			width: 40px;
+			height: 20px;
+		}
+		
+		.smallPic {
+			width: 35px;
+			height: 35px;
+		}
+		 #firstlabel span{
+            line-height: 30px;
+            display: inline-block;
+            
+            height: 30px;
+        }
+        #firstcheck{
+            margin:0;
+            height:20px;
+            width: 20px;
+        }
+        #list>tbody>tr>td>.mcheck{
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin-left: 54px;
+        }
+		</style>
+</head>
+<body>
+	<table id="list">
+		<tr>
+		    <td><label id="firstlabel"for="firstcheck"><input type="checkbox" id="firstcheck"><span>全选</span></label></td>
+			<td>图片</td>
+			<td>单价</td>
+			<td>数量</td>
+			<td>小计</td>
+			<td>操作</td>
+		</tr>
+	   <!--<tr>
+			<td><img src="imgs/1-small.jpg" class="smallPic"></td>
+			<td>￥255</td>
+			<td>
+				<button class="reduce">-</button>
+				<input type="text" value="1" class="num">
+				<button class="add"> + </button>
+			</td>
+			<td>￥255</td>
+			<td class="del">删除</td>
+		</tr>-->
+
+	</table>
+	<div id="total">总计：<span></span></div>
+</body>
+</html>
+<script src="cookie.js"></script>
+<script src="ownpool.js"></script>
+<script type="text/javascript">
+function ajax(options){
+	//创建一个ajax对象
+	var xhr = new XMLHttpRequest() || new ActiveXObject("Microsoft,XMLHTTP");
+
+	//数据的处理  {a:1,b:2}  a=1&b=2;
+	var str = "";
+	for(var key in options.data){
+		str+="&"+key+"="+options.data[key];
+	}
+
+	str = str.slice(1)
+	if(options.type == "get"){
+		var url = options.url+"?"+str;
+
+		xhr.open("get",url);
+
+		xhr.send();
+
+	}else{
+		xhr.open("post",options.url);
+
+		xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+
+		xhr.send(str)
+
+	}
+
+	//监听
+	xhr.onreadystatechange = function(){
+		//当请求成功的时候
+		if(xhr.readyState == 4 && xhr.status == 200){
+
+			var d = xhr.responseText;
+
+			//将请求的数据传递给成功回调函数
+			options.success&&options.success(d)
+
+		}else if(xhr.status != 200){
+			//当失败的时候将服务器的状态传递给失败的回调函数
+			options.error&&options.error(xhr.status);
+		}
+	}
+}
+
+// ajax
+	var str = "";
+	// 在页面上渲染
+    var oList = document.getElementById("list");
+    ajax({
+    	type:"get",
+    	url: "2.json",
+		data: {},
+		success: function(data) {
+				// console.log(data) json对象		    
+			var  data = JSON.parse(data);
+				// console.log(data) 数组
+    		if(getCookie("info")){
+				// console.log(getCookie("info")) json对象
+        	var arr = JSON.parse(getCookie("info"));
+        // console.log(arr);数组
+        for(var i=0;i<arr.length;i++){
+            for(var j=0;j<data.length;j++){
+                if(arr[i].id == data[j].id){
+                	str+='<tr data-id='+data[j].id+'><td><input type="checkbox" class="mcheck"></td><td><img src="'+data[j].img+'" class="smallPic"></td><td>'+data[j].pirce+'</td><td><button class="reduce">-</button><input type="text" value="'+arr[i].num+'" class="num"><button class="add"> + </button></td><td>'+data[j].pirce.slice(0)*100*arr[i].num/100+'</td><td class="del">删除</td></tr>'
+		 
+                }
+            }
+        }
+
+        oList.innerHTML+=str;
+   }
+   // 点击删除，删除一行数据
+   var olist=document.getElementById("list");
+   olist.onclick=function(e){
+   		var e=e||event;
+   		var target=e.target||e.srcElement;
+   		if(target.className=="del") {
+   			this.children[1].children[0].remove();
+   			var arr = JSON.parse(getCookie("info"));
+   			// console.log(arr)
+   			
+   			// console.log(vid)
+            for (var i = 0; i < arr.length; i++) {
+            	var vid=target.parentNode.getAttribute("data-id");
+                if(arr[i].id==vid){
+                    arr.splice(i,1);
+                }
+            }
+            //重新设置cookie
+            // console.log(arr)
+            setCookie("info",JSON.stringify(arr),7)
+   		}
+   		// 加商品
+        if(target.className=="add"){
+            var index=target.parentNode.parentNode.getAttribute("data-id");
+            var arr = JSON.parse(getCookie("info"));
+            for (var i = 0; i < arr.length; i++) {
+            	
+                if(arr[i].id==index){
+                    arr[i].num++;
+                    target.previousElementSibling.value=arr[i].num;
+                    target.parentNode.nextElementSibling.innerText="$"+target.parentNode.previousElementSibling.innerText.slice(0)*arr[i].num;
+                }
+            }
+            setCookie("info",JSON.stringify(arr),7)
+        }
+        //减商品
+        if(target.className=="reduce"){
+            var index=target.parentNode.parentNode.getAttribute("data-id");
+            var arr = JSON.parse(getCookie("info"));
+            for (var i = 0; i < arr.length; i++) {
+
+                if(arr[i].id==index){
+                    arr[i].num--;
+                    if(arr[i].num<=0){
+                        target.parentNode.parentNode.remove();
+                        var index=target.parentNode.parentNode.getAttribute("data-id");
+                        for (var i = 0; i < arr.length; i++) {
+                            if(arr[i].id==index){
+                                arr.splice(i,1);
+                            }
+                        }
+                        setCookie("info",JSON.stringify(arr),7)
+                    }else{
+                    target.nextElementSibling.value=arr[i].num;
+                    target.parentNode.nextElementSibling.innerText="$"+target.parentNode.previousElementSibling.innerText.slice(0)*arr[i].num;
+                    }
+                }
+            }
+            setCookie("info",JSON.stringify(arr),7)
+        }  
+         //总计
+        //将打上勾的放进一个新数组
+        var newarr=[];
+        var arr = JSON.parse(getCookie("info"));
+        for(var k in arr){
+            for(var h in mcheck){
+                if(mcheck[h].checked){
+                    var index=mcheck[h].parentNode.parentNode.getAttribute("data-id");
+
+                    if (arr[k].id==index){
+                        newarr.push(arr[k])
+                    }
+                }
+            }
+        }
+        //遍历数组，加起来
+        var mnum = 0;
+        var mtotal=document.getElementById("total")
+        for(i=0;i<newarr.length;i++){
+            for(j=0;j<data.length;j++){
+                if(data[j].id==newarr[i].id){
+                    var mpr = data[j].pirce.slice(0)
+                }
+            }
+            mnum+=mpr*newarr[i].num
+        }
+        var mtotal=document.getElementById("total")
+        mtotal.firstElementChild.innerText="$"+mnum;
+    }
+    //全选
+    var firstcheck = document.getElementById("firstcheck")
+    var mcheck =document.getElementsByClassName("mcheck")
+    firstcheck.onclick = function(){
+        if(this.checked){
+            for(var i=0;i<mcheck.length;i++){
+                mcheck[i].checked = "checked"}
+        }
+        else{
+            for(var i=0;i<mcheck.length;i++){
+            mcheck[i].checked = ""}
+        }
+    }
+    //反选
+    var mnum=0;
+    for(let i=0;i<mcheck.length;i++){     
+        mcheck[i].onclick = function(){
+            var bStop = false;
+            for(var j=0;j<mcheck.length;j++){
+                if(!mcheck[j].checked){
+                    bStop=true;
+                    break;
+                }
+            }
+            if(bStop){
+                firstcheck.checked=""
+            }
+            else{
+                firstcheck.checked="checked"
+            }
+        }
+
+
+
+
+        }
+    }
+  
+})
+   
+
+</script>

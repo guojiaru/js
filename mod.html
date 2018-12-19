@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>模板</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	*{margin:0;padding: 0}
+	li{list-style: none;}
+	a{text-decoration: none;}
+	img{display: block;}
+	body,html{
+		width: 100%;
+		height: 100%;
+	}
+	#nav {
+		width: 1360px;
+		height: 28px;
+		background: #ffffff;
+		margin:0 auto;
+	}
+	
+	#nav>button{
+		width: 58px;
+		height: 16px;
+		margin-top: 12px;
+		border:none;
+		border-right: 1px solid black;
+		padding: 0px;
+
+	}
+
+	#log1{
+		width: 700px;
+		height: 500px;
+		display: none;
+		position: absolute;
+		background:#ccc;
+		z-index: 6;
+
+	}
+	#log1>p{
+		width: 400px;
+		float: left;
+	}
+	#log1 #ramdon{
+		width: 50px;
+		float: left;
+	}
+	#nav ul{
+		width: 827px;
+		height: 16px;
+		margin-top: 12px;
+		margin-left: 256px;
+		display: block;
+		float: right;
+		
+	}
+
+	#nav ul li{
+		height: 16px;
+		margin:0px 10px 0px 10px;
+		float: left; 
+
+	}
+			#center{
+			width: 1352px;
+			height: 428px;
+			margin:0 auto;
+			
+
+		}
+	#center #top{
+			width: 1352px;
+			height: 82px;
+			line-height: 82px;
+			float: left;
+
+		}
+		#center #top p{
+			float: left;
+
+			font-size: 38px;
+		}
+		#center #top button{
+			float: left;
+			margin-top: 26px;
+			width: 30px;
+			height: 30px;
+		}
+
+#main{
+		width: 100%;
+		height: 100%;
+	}
+	#left{
+		width: 550px;
+		height: 652px;
+		float: left;
+		/*background: red;*/
+	}
+	#right{
+		width: 1000px;
+		height: 652px;
+		float: left;
+		background: yellow;
+	}
+	
+
+			.small {
+				margin: 0 10px;
+				border: 1px solid #fff;
+			}
+			.small:hover {
+				border-color: #000;
+			}
+			#box{
+				width: 220px;
+				height: 220px;
+				border: 1px solid #000;
+			}
+			#max{
+				position: absolute;
+				left: 300px;
+				top: 0;
+				width: 220px;
+				height: 220px;
+				display: none;
+				overflow: hidden;
+				z-index: 10;
+			}
+			#max>img{
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+			#filter{
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				background: #000;
+				opacity: 0.6;
+				display: none;
+			}
+			 #car{
+			 	width:80px;
+			 	height: 40px;
+			 	color: #fff;
+			 	font-size: 16px;
+			 	text-align: center;
+			 	line-height: 40px;
+			 	text-decoration: none;
+			 	background: red}
+
+
+
+#bottom{
+		width: 1815px;
+		height: 516px;
+		margin:0 auto;
+		background: #292a2c;
+	}
+	#bottomcon{
+		width: 1356px;
+		height: 232px;
+		margin:0 auto;
+	}
+    #bottomcon>ul{
+		width: 236px;
+		height: 232px;
+		float: left;
+		
+	}
+	#bottomcon>ul>li{
+		width: 236px;
+		height: 25px;
+		float: left;
+		
+		
+	}
+	#bottomcon>ul>li>a{
+		width: 236px;
+		height: 25px;
+		line-height: 69px;
+		text-align: center;
+		color: #6b8b99;
+		float: left;
+		font-size: 12px;
+	}
+	#buttoncon1{
+		width: 1356px;
+		height: 46px;
+		margin:0 auto;
+
+	}
+	#buttoncon1>ul{
+		width: 1356px;
+		
+		float: left;
+	}
+
+	#buttoncon1>ul>li{
+		
+		height: 46px;
+		float: left;
+	}
+	#buttoncon1>ul>li>a{
+		height: 36px;
+		line-height: 36px;
+		padding-left: 5px;
+		padding-right: 5px;
+		
+		font-size: 15px;
+		float: left;
+		color: #475c51;
+		border-right: 1px solid #475c51;
+	}
+	#buttoncon1>div{
+		width: 1162px;
+		margin:0 auto;
+	}
+	#buttoncon1>div{
+		width: 1166px;
+		margin:0 auto;
+		float: left;
+	}
+	#buttoncon1>div>li{
+		height: 34px;
+		float: left;
+		margin-right: 10px;
+		opacity: 0.3;
+	}
+	#buttoncon1>div>li:hover{
+		opacity:1;
+	}
+
+
+	</style>
+</head>
+<body>
+<div id="nav">
+		hi,欢迎来到衣联
+		<button type="text" value="" id="log">请登录</button>
+		<button type="text" value="" id="zhuce">免费注册</button>
+		<ul>
+			<li><a href="#">衣联首页</a></li>
+			<li><a href="#">我的衣联</a></li>
+			<li><a href="#">进货车</a></li>
+			<li><a href="#">收藏夹</a></li>
+			<li><a href="#">在线客服</a></li>
+			<li><a href="#">手机逛衣联</a></li>
+			<li><a href="#">网站导航</a></li>
+			<li><a href="#">供应商入住</a></li>
+
+		</ul>
+	</div>
+	<div id="center">
+		<div id="top">
+			<p>衣联直播中心</p>
+			<button id="value1">1</button><p>月</p><button id="value2">1</button>
+		</div>
+		<div id="centercon">
+
+		</div>
+	</div>
+
+	</div>
+	</div>
+	<div id="bottom">
+	<div id="bottomcon">
+		<ul>
+			<li><a href="##">新手指南</a></li>
+			<li><a href="##">账户注册</a></li>
+			<li><a href="##">买家入门</a></li>
+			<li><a href="##">卖家专区</a></li>
+			<li><a href="##">常见问题</a></li>
+		</ul>
+		<ul>
+			<li><a href="##">支付方式</a></li>
+			<li><a href="##">付款方式</a></li>
+			<li><a href="##">网银支付</a></li>
+			<li><a href="##">银联支付</a></li>
+			<li><a href="##">支付宝支付</a></li>
+		</ul>
+		<ul>
+			<li><a href="##">交易保障</a></li>
+			<li><a href="##">诚信保障</a></li>
+			<li><a href="##">包退包换</a></li>
+			<li><a href="##">准时发货</a></li>
+			<li><a href="##">实拍认证</a></li>
+		</ul>
+		<ul>
+			<li><a href="##">投诉维权</a></li>
+			<li><a href="##">仲裁管理</a></li>
+			<li><a href="##">举报管理</a></li>
+			<li><a href="##">投诉管理</a></li>
+			<li><a href="##">退货退款</a></li>
+		</ul>
+		<ul>
+			<li><a href="##">商家服务</a></li>
+			<li><a href="##">开店管理</a></li>
+			<li><a href="##">商家入驻</a></li>
+			<li><a href="##">商家认证</a></li>
+			<li><a href="##">商家提现</a></li>
+		</ul>
+
+	</div>
+	<div id="buttoncon1">
+		<ul>
+			<li><a href="##">部门分类：</a></li>
+			<li><a href="##">长袖T恤</a></li>
+			<li><a href="##">广东童装批发</a></li>
+			<li><a href="##">情侣装外套</a></li>
+			<li><a href="##">黑色连衣裙</a></li>
+			<li><a href="##">秋装新款连衣裙</a></li>
+			<li><a href="##">韩版时尚男装</a></li>
+			<li><a href="##">女风衣外套</a></li>
+			<li><a href="##">秋装连衣裙</a></li>
+			<li><a href="##">韩版修身牛仔裤</a></li>
+			<li><a href="##">儿童服装</a></li>
+			<li><a href="##">女款卫衣</a></li>
+			<li><a href="##">紧身裤</a></li>
+			<li><a href="##">打底衫长款</a></li>
+			<li><a href="##">服装店铺排行</a></li>
+
+		</ul>
+	    <ul>
+	    	<li><a href="##">友情链接：</a></li>
+	    	<li><a href="##">QQ：33103-88253</a></li>
+	    	<li><a href="##">慧聪网</a></li>
+	    	<li><a href="##">中国建材网</a></li>
+	    	<li><a href="##">中国女装网</a></li>
+	    	<li><a href="##">结婚装修</a></li>
+	    	<li><a href="##">亲亲宝贝网</a></li>
+	    	<li><a href="##">爱靓网时尚女装</a></li>
+	    	<li><a href="##">中商情报网</a></li>
+	    	<li><a href="##">亿邦动力网 </a></li>
+	    	<li><a href="##">加盟网</a></li>
+	    	<li><a href="##">黄页88网</a></li>
+	    	<li><a href="##">品牌</a></li>
+	    	<li><a href="##">播视网视频</a></li>
+	    	<li><a href="##">结婚网</a></li>
+	    	<li><a href="##">微商代理</a></li>
+	    	<li><a href="##">搜了网</a></li>
+	    	<li><a href="##">中国丽人网</a></li>
+	    	<li><a href="##">全球纺织网</a></li>
+	    	<li><a href="##">手表品牌排行榜</a></li>
+	    	<li><a href="##">连锁加盟网</a></li>
+	    	<li><a href="##">婚戒</a></li>
+	    	<li><a href="##">时尚</a></li>
+	    	<li><a href="##">家具</a></li>
+	    	<li><a href="##">设计图片</a></li>
+	    	<li><a href="##">发型</a></li>
+	    	<li><a href="##">b2b</a></li>
+	    	<li><a href="##">中国时尚新媒体</a></li>
+	    	<li><a href="##">微商货源网</a></li>
+	    	<li><a href="##">更多</a></li>
+	    	<li><a href="##">返利网</a></li>
+	    	<li><a href="##">跨境电商</a></li>
+	    </ul>
+	    <ul>
+			<li><a href="##">关于衣联</a></li>
+			<li><a href="##">衣联动态</a></li>
+			<li><a href="##">衣联招聘</a></li>
+			<li><a href="##">免费开店</a></li>
+			<li><a href="##">合作伙伴</a></li>
+			<li><a href="##">联系衣联</a></li>
+	    </ul>
+		<ul>
+			<li><a href="##">Copyright&copy2003-2018 Eelly.com All Reserved.广州市衣联网络科技有限公司</a></li>
+			<li><a href="##">版权所有 隐私声明</a></li>
+			<li><a href="##">粤ICP备10209547号</a></li>
+			<li><a href="##">公安备案号44010402000492</a></li>
+		</ul>
+		<div >
+			<li><img src="img/b1.png"></li>
+			<li><img src="img/b2.png"></li>
+			<li><img src="img/b3.png"></li>
+			<li><img src="img/b4.png"></li>
+			<li><img src="img/b5.png"></li>
+			<li><img src="img/b6.png"></li>
+			<li><img src="img/b7.png"></li>
+			<li><img src="img/b8.png"></li>
+			<li><img src="img/b9.png"></li>
+			<li><img src="img/b10.png"></li>
+			<li><img src="img/b11.png"></li>
+			<li><img src="img/b12.png"></li>
+			<li><img src="img/b13.jpg"></li>
+	    </div>	
+	</div>
+</div>	
+</body>
+</html>
+<script src="cookie.js"></script>
+<script type="text/javascript">
+var otop = document.getElementById("top");
+	var avalue1 = document.getElementById("value1");
+	var avalue2= document.getElementById("value2");
+	var fn=function(){
+	var d = new Date();
+	var m = d.getMonth();
+	var r = d.getDate();
+	
+	avalue1.innerHTML=m+1;
+	avalue2.innerHTML=r;
+
+}
+
+	fn();
+
+</script>

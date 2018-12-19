@@ -1,0 +1,167 @@
+body,p,h1,h2,h3,h4,h5,h6,ul,dl,dd,td,input,fieldset,textarea,option,ul,li,img{ margin:0; padding:0;}
+li{list-style:none;}
+a{text-decoration:none; color:#333;}
+img{border:none; vertical-align:top; }
+a,input{outline:none;}
+h1,h2,h3,h4,h5,h6,b,strong{font-weight:100;}
+i,em{font-style:normal;}
+
+.clear{zoom:1;}
+.clear:after{content:"."; display:block; clear:both; height:0; visibility:hidden;}
+.fl{float:left;}
+.fr{float:right;}
+/*全局属性*/
+/*cartHeader*/
+.shopHeader,.cart{
+	width: 1228px;
+	margin: 0 auto;
+}
+.cartHeader{
+	overflow: hidden;
+	height: 132px;
+	width: 100%;
+	border-bottom: 2px solid #000;
+	background: #f3f3f3;
+	
+}
+.cartHeader .shopHeader{
+	overflow: hidden;
+	padding-top: 38px;
+	/*margin: 32px 0;*/
+	height: 54px;
+	
+	
+}
+
+.cartHeader .shopHeader img,h3,p{
+	display: inline-block;
+	vertical-align: middle;
+	
+}
+.cartHeader .shopHeader img{
+	margin-right: 80px;
+}
+.cartHeader .shopHeader .shopName{
+	
+	width: 152px;
+}
+.cartHeader .shopHeader p{
+	font-size: 12px;
+	margin:  0 22px;
+	width: 774px;
+}
+
+ .myCart{
+ 	line-height: 42px;
+ 	/*display: inline-block;
+ 	margin-top: 20px;
+ 	vertical-align: bottom;
+ 	text-align: right;
+ 	margin-left: 100px;*/
+	/*height: 100px;*/
+	float: right;
+	/*margin-right: 0;*/
+	/*width: 100px;*/
+}
+ .myCart img{
+ 	vertical-align: bottom;
+ }
+/*购物车列表*/
+.cart{
+	overflow: hidden;
+}
+.cart #list {
+	width: 100%;
+}
+.listFirst input{
+	border: 1px solid #b5b4b5;
+	background: white;
+	/*-webkit-appearance: none;*/
+	width: 14px;
+	height: 16px;
+}
+.listFirst{
+	width:40px;
+}
+/*318*/
+.cart #list .listSecond{
+	width:318px;
+}
+.cart #list td{
+	text-align: center;
+	width: 134px;
+	height: 128px;
+}
+.cart #list th{
+	height: 62px;
+}
+.cart #list td img{
+	vertical-align: middle;
+	width: 64px;
+	height: 76px;
+}
+.cart #list td span{
+	display: inline-block;
+	text-align: left;
+	width: 254px;
+}
+.cart #list td p{
+	line-height: 10px;
+	font-size: 12px;
+}
+.cart #list td p b{
+	color: red;
+}
+.cart #list .listFour,.listSix{
+	color: red;
+}
+.cart #list .listFive div{
+	width: 120px;
+	border: 1px solid #ccc;
+	height: 32px;
+}
+.cart #list .listFive input{
+	position: relative;
+	text-align: center;
+	width: 58px;
+}
+
+.cart #list .listFive input,button{
+
+	vertical-align: middle;
+	outline: none;
+		height: 100%;
+	border: none;
+		/*border-top: 1px solid #ccc;
+			border-bottom: 1px solid #ccc;*/
+		
+}
+.cart #list .listFive button{
+	width: 31px;
+	background: white;
+}
+.cart #list .listFive p{
+	color: #ccc;
+}
+.cart #list .listEight button{
+	width: 48px;
+	height: 14px;
+	background: white;
+}
+.cart #list .listEight .del{
+	line-height: 14px;
+	border-left: 1px solid black;
+}
+.cart #listAll {
+	text-align: center;
+	height: 100px;
+	width: 100%;
+}
+#listAll .listFirst{
+	width: 40px;
+}
+#listAll button{
+	background: #04D4EE;
+	width: 100px;
+	height: 40px;
+}

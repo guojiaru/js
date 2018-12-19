@@ -1,0 +1,115 @@
+body,p,h1,h2,h3,h4,h5,h6,ul,dl,dd,td,input,fieldset,textarea,option,ul,li,img{ margin:0; padding:0;}
+li{list-style:none;}
+a{text-decoration:none; color:#333;}
+img{border:none; vertical-align:top; }
+a,input{outline:none;}
+h1,h2,h3,h4,h5,h6,b,strong{font-weight:100;}
+i,em{font-style:normal;}
+
+.clear{zoom:1;}
+.clear:after{content:"."; display:block; clear:both; height:0; visibility:hidden;}
+.fl{float:left;}
+.fr{float:right;}
+/*登录*/
+.welcomeDiv{
+	text-align: center;
+	width: 350px;
+	height: 350px;
+	background: white;
+	position: relative;
+	left: 50%;
+	top: 5%;
+}
+
+ .welcomeDiv div .welcomeP1{
+	display: inline-block;
+	color: red;
+	height: 10px;
+	font-size: 12px;
+	line-height: 10px;
+	text-align: left;
+	border: none;
+}
+
+ .welcomeDiv div .welcomeP2{
+	color: red;
+	font-size: 12px;
+	height: 10px;
+	line-height: 10px;
+	text-align: left;
+	border: none;
+}
+
+ .welcomeDiv div .welcomePImg{
+	position: relative;
+}
+ .welcomeDiv div .welcomePImg .welcomePImg1{
+	position: absolute;
+	right: 0;
+	top: 6px;
+	display: none;
+	
+}
+
+.welcomeDiv .welcome{
+	text-align: left;
+	background: white;
+}
+ .welcomeDiv .welcome b{
+	
+	font-size: 12px;
+	margin:0 28px;
+	line-height:70px ;
+}
+  .welcomeDiv .welcome b:nth-child(2){
+	
+	float: right;
+}
+ .welcomeDiv div{
+	margin-left: 25px;
+	text-align: center;
+	width: 300px;
+}
+  .welcomeDiv div p{
+	text-align: center;
+	background: white;
+	border-radius:0 ;
+	width: 300px;
+	border: 1px solid #ccc;
+	line-height: 30px;
+}
+  /*.welcomeDiv div p:nth-child(2) input{
+	background:red url(../img/passwordKey.png) no-repeat right;
+}*/
+
+.welcomeDiv div p .loginInput{
+	background:url(../img/passwordKey.png) no-repeat right;
+
+	
+}
+  .welcomeDiv div p input{
+	border: none;
+	width:271px ;
+	
+}
+
+  .welcomeDiv div .forget{
+	font-size: 12px;
+	border: none;
+	overflow: hidden;
+	line-height: 16px;
+}
+ .welcomeDiv div .forget a:nth-child(2){
+	float: left;
+}
+ .welcomeDiv div .forget a:nth-child(3){
+	float: right;
+}
+ .welcomeDiv div button{
+	width: 100%;
+	background: #00bbd7;
+	border: none;
+	height: 30px;
+	color: white;
+	font-size: 16px;
+}

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>模板</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	*{margin:0;padding: 0}
+	li{list-style: none;}
+	a{text-decoration: none;}
+	img{display: block;}
+	body,html{
+		width: 100%;
+		height: 100%;
+	}
+	#nav {
+		width: 1360px;
+		height: 28px;
+		background: #ffffff;
+		margin:0 auto;
+	}
+	
+	#nav>button{
+		width: 58px;
+		height: 16px;
+		margin-top: 12px;
+		border:none;
+		border-right: 1px solid black;
+		padding: 0px;
+
+	}
+
+	#log1{
+		width: 700px;
+		height: 500px;
+		display: none;
+		position: absolute;
+		background:#ccc;
+		z-index: 6;
+
+	}
+	#log1>p{
+		width: 400px;
+		float: left;
+	}
+	#log1 #ramdon{
+		width: 50px;
+		float: left;
+	}
+	#nav ul{
+		width: 827px;
+		height: 16px;
+		margin-top: 12px;
+		margin-left: 256px;
+		display: block;
+		float: right;
+		
+	}
+
+	#nav ul li{
+		height: 16px;
+		margin:0px 10px 0px 10px;
+		float: left; 
+
+	}
+			#center{
+			width: 1352px;
+			height: 428px;
+			margin:0 auto;
+			
+
+		}
+	#center #top{
+			width: 1352px;
+			height: 82px;
+			line-height: 82px;
+			float: left;
+
+		}
+		#center #top p{
+			float: left;
+
+			font-size: 38px;
+		}
+		#center #top button{
+			float: left;
+			margin-top: 26px;
+			width: 30px;
+			height: 30px;
+		}
+	#con{
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	#main{
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+	#left{
+		width: 550px;
+		height: 652px;
+		float: left;
+		/*background: red;*/
+	}
+	#right{
+		width: 1000px;
+		height: 652px;
+		float: left;
+		background: yellow;
+	}
+	
+
+			.small {
+				margin: 0 10px;
+				border: 1px solid #fff;
+				float: left;
+			}
+			.small:hover {
+				border-color: #000;
+			}
+			#box{
+				width: 220px;
+				height: 220px;
+				border: 1px solid #000;
+			}
+			#max{
+				position: absolute;
+				left: 300px;
+				top: 0;
+				width: 220px;
+				height: 220px;
+				display: none;
+				overflow: hidden;
+				z-index: 10;
+			}
+			#max>img{
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+
+			#filter{
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				background: #000;
+				opacity: 0.6;
+				display: none;
+			}
+			 #car{
+			 	width:80px;
+			 	height: 40px;
+			 	color: #fff;
+			 	font-size: 16px;
+			 	text-align: center;
+			 	line-height: 40px;
+			 	text-decoration: none;
+			 	background: red}
+
+
+
+#bottom{
+		width: 1815px;
+		height: 232px;
+		margin:0 auto;
+		background: #292a2c;
+		float: left;
+	}
+	#bottomcon{
+		width: 1356px;
+		height: 232px;
+		margin:0 auto;
+	}
+    #bottomcon>ul{
+		width: 236px;
+		height: 232px;
+		float: left;
+		
+	}
+	#bottomcon>ul>li{
+		width: 236px;
+		height: 25px;
+		float: left;
+		
+		
+	}
+	#bottomcon>ul>li>a{
+		width: 236px;
+		height: 25px;
+		line-height: 69px;
+		text-align: center;
+		color: #6b8b99;
+		float: left;
+		font-size: 12px;
+	}
+	#buttoncon1{
+		width: 1356px;
+		height: 46px;
+		margin:0 auto;
+
+	}
+	#buttoncon1>ul{
+		width: 1356px;
+		
+		float: left;
+	}
+
+	#buttoncon1>ul>li{
+		
+		height: 46px;
+		float: left;
+	}
+	#buttoncon1>ul>li>a{
+		height: 36px;
+		line-height: 36px;
+		padding-left: 5px;
+		padding-right: 5px;
+		
+		font-size: 15px;
+		float: left;
+		color: #475c51;
+		border-right: 1px solid #475c51;
+	}
+	#buttoncon1>div{
+		width: 1162px;
+		margin:0 auto;
+	}
+	#buttoncon1>div{
+		width: 1166px;
+		margin:0 auto;
+		float: left;
+	}
+	#buttoncon1>div>li{
+		height: 34px;
+		float: left;
+		margin-right: 10px;
+		opacity: 0.3;
+	}
+	#buttoncon1>div>li:hover{
+		opacity:1;
+	}
+
+
+	</style>
+</head>
+<body>
+<!-- 头部 -->
+<div id="nav">
+		hi,欢迎来到衣联
+		<button type="text" value="" id="log">请登录</button>
+		<button type="text" value="" id="zhuce">免费注册</button>
+		<ul>
+			<li><a href="#">衣联首页</a></li>
+			<li><a href="#">我的衣联</a></li>
+			<li><a href="#">进货车</a></li>
+			<li><a href="#">收藏夹</a></li>
+			<li><a href="#">在线客服</a></li>
+			<li><a href="#">手机逛衣联</a></li>
+			<li><a href="#">网站导航</a></li>
+			<li><a href="#">供应商入住</a></li>
+
+		</ul>
+</div>
+<!-- 直播中心 -->
+<div id="center">
+		<div id="top">
+			<p>衣联直播中心</p>
+			<button id="value1">1</button><p>月</p><button id="value2">1</button>
+		</div>
+		<div id="centercon">
+
+		</div>
+</div>
+
+<!-- 主体 -->
+<div id="con">
+<!-- <div id="main"> -->
+
+<!--  <div id="left">
+		
+		<div id="box">
+		  	<div id="filter"></div>
+			<img src="img/img1/img1.jpg" class="middle" width="220" height="220">
+		 </div>
+		<div id="minImg"></div>
+		<div id="max">
+			<img src="img/img1/bimg1.jpg" class="bigImg" width="440" height="440">
+		</div>
+	 
+</div>
+<div id="right">
+     <p class="title">三只松鼠坚果炒货零食特产每日坚果开心果100g/袋</p>
+	 <p class="pirce">¥28.90</p> 
+	 <button>加入购物车</button>
+</div>  -->
+
+</div>
+<!-- </div> -->
+<!-- 尾部 -->
+<div id="bottom">
+<div id="bottomcon">
+ 	<ul>
+			<li><a href="##">新手指南</a></li>
+			<li><a href="##">账户注册</a></li>
+			<li><a href="##">买家入门</a></li>
+			<li><a href="##">卖家专区</a></li>
+			<li><a href="##">常见问题</a></li>
+	</ul>
+	<ul>
+			<li><a href="##">支付方式</a></li>
+			<li><a href="##">付款方式</a></li>
+			<li><a href="##">网银支付</a></li>
+			<li><a href="##">银联支付</a></li>
+			<li><a href="##">支付宝支付</a></li>
+	</ul>
+	<ul>
+			<li><a href="##">交易保障</a></li>
+			<li><a href="##">诚信保障</a></li>
+			<li><a href="##">包退包换</a></li>
+			<li><a href="##">准时发货</a></li>
+			<li><a href="##">实拍认证</a></li>
+	</ul>
+	<ul>
+			<li><a href="##">投诉维权</a></li>
+			<li><a href="##">仲裁管理</a></li>
+			<li><a href="##">举报管理</a></li>
+			<li><a href="##">投诉管理</a></li>
+			<li><a href="##">退货退款</a></li>
+	</ul>
+	<ul>
+			<li><a href="##">商家服务</a></li>
+			<li><a href="##">开店管理</a></li>
+			<li><a href="##">商家入驻</a></li>
+			<li><a href="##">商家认证</a></li>
+			<li><a href="##">商家提现</a></li>
+	</ul>
+
+</div>
+	
+</div>	
+</body>
+</html>
+<script src="cookie.js"></script>
+<script type="text/javascript">
+// 在第一个页面中，已经将location.href的值传入，将location.href中id取出
+var urlId = location.href.split("?")[1].split("=")[1];
+// 显示的日期，用在模板中
+var otop = document.getElementById("top");
+	var avalue1 = document.getElementById("value1");
+	var avalue2= document.getElementById("value2");
+	var fn=function(){
+	var d = new Date();
+	var m = d.getMonth();
+	var r = d.getDate();
+	
+	avalue1.innerHTML=m+1;
+	avalue2.innerHTML=r;
+
+}
+
+	fn();
+
+// ajax
+function ajax(options){
+	//创建一个ajax对象
+	var xhr = new XMLHttpRequest() || new ActiveXObject("Microsoft,XMLHTTP");
+
+	//数据的处理  {a:1,b:2}  a=1&b=2;
+	var str = "";
+	for(var key in options.data){
+		str+="&"+key+"="+options.data[key];
+	}
+
+	str = str.slice(1)
+	if(options.type == "get"){
+		var url = options.url+"?"+str;
+
+		xhr.open("get",url);
+
+		xhr.send();
+
+	}else{
+		xhr.open("post",options.url);
+
+		xhr.setRequestHeader("content-type","application/x-www-form-urlencoded");
+
+		xhr.send(str)
+
+	}
+
+	//监听
+	xhr.onreadystatechange = function(){
+		//当请求成功的时候
+		if(xhr.readyState == 4 && xhr.status == 200){
+
+			var d = xhr.responseText;
+
+			//将请求的数据传递给成功回调函数
+			options.success&&options.success(d)
+
+		}else if(xhr.status != 200){
+			//当失败的时候将服务器的状态传递给失败的回调函数
+			options.error&&options.error(xhr.status);
+		}
+	}
+}
+
+// ajax操作
+// 建立一个字符串，在con里面进行遍历
+	var str = "";
+	var con= document.getElementById("con");
+
+	ajax({
+		// 用get方式将2.json中的数据取到，如果成功则先把数组对象转换成字符串，将json中的数据进行遍历，渲染到界面上
+			type: "get",
+			url: "2.json",
+			data: {},
+			// 成功的回调函数
+			success: function(data) {
+				// console.log(data)		    
+				var  data = JSON.parse(data);
+				// console.log(data)
+				 for(var i=0;i<data.length;i++){
+				 	// 看url的id和json中的id那个相等，相等遍历出来
+				 	if(urlId==data[i].id){
+					str += `<div id="main" data-id=${data[i].id}>
+					<div id="left">
+					<div id="box">
+					  	<div id="filter"></div>
+						<img src="img/img1/img1.jpg" class="middle" width="220" height="220">
+					 </div>
+					 <div id="minImg"></div>
+					 <div id="max">
+						<img src="img/img1/bimg1.jpg" class="bigImg" width="440" height="440">
+					 </div>
+				 
+			         </div>
+					<div id="right">
+					     <p class="title">${data[i].title}</p>
+						 <p class="pirce">¥${data[i].pirce}</p> 
+						 <a href="shop.html" id="car">加入购物车</a>
+					</div>
+					</div> `
+					con.innerHTML = str;
+				}}
+				// 点击添加购物车
+		var car=document.getElementById("car");
+
+		car.onclick = function() {
+   		// 这个按钮在right中，找到他父级的父级的（插入的main大框）的自定义属性
+        var goodsId = this.parentNode.parentNode.getAttribute("data-id");
+
+       
+      /*
+        我想在cookie中存入以下类型的字符串数据  
+        [{id:01,num:1},{id:02,num:2}]  
+       */
+      //定义一个空的对象
+       var goods = {}
+       /*
+        获取当前的cookie如果当前cookie中存在值的话那么我将这个值转换成对象保存在arr中
+
+        如果当前cookie中没有值的话  那么我就声明一个数组
+
+        */
+       if(getCookie("info")){
+          arr = JSON.parse(getCookie("info"));
+       }else{
+          var arr = [];
+       }
+       // console.log(arr)
+       // console.log(arr.length)
+
+      /*
+        判断当前数组是否为空如果不为空的时候分为2种情况
+        1、数组中的数据正好是我点击的数据 然后我直接获取到数组里面的数据进行++即可
+
+        2、数组里面有数据但是这些数据都不是我刚才点击的数据
+        因此我需要创建一个对象 然后将点击商品的id级数据存入这个对象中并且插入这个数组中  
+        
+
+        如果条件不成立
+            代表当前数组是一个空的数组  我需要将当前商品的信息存入一个对象中然后添加到这个数组中
+
+
+       */
+      // arr的长度大于0
+       if(arr.length>0){
+       	// 对arr进行遍历
+         for(var i=0;i<arr.length;i++){
+            var bStop = false;
+            // 有这个商品，num++
+            if(arr[i].id == goodsId){
+                arr[i].num++;
+                bStop = true;
+                break;
+            }
+         }
+         // 如果没有这个商品，将json中的这个id给了对象中的id属性，将对象推入数组中
+         if(!bStop){
+            goods.id = goodsId;
+            goods.num = 1;
+            arr.push(goods)
+            // console.log(111)
+         }
+
+       }else{
+            goods.id = goodsId;
+            goods.num = 1;
+            arr.push(goods)
+       }
+      // 没有商品的话，数量为1
+
+      //将数组转换为字符串存入cookie
+       setCookie("info",JSON.stringify(arr),7);
+      
+   }
+   // 放大镜效果
+
+var minImg = document.getElementById("minImg");
+var middle = document.querySelector(".middle");
+
+var str = "";
+for(var i=0;i<5;i++){
+    str+="<img src=img/img1/small"+(i+1)+".jpg class='small'  data-url=img/img1/bimg"+(i+1)+".jpg>";
+}
+
+minImg.innerHTML = str;
+
+
+
+var aImg = minImg.querySelectorAll("#minImg>img");
+var bigImg = document.querySelector(".bigImg");
+var oBox = document.getElementById("box");
+var max = document.getElementById("max");
+var oFilter = document.getElementById("filter");
+
+for(var i=0;i<aImg.length;i++){
+    aImg[i].onmouseover = function(){
+        var src = this.getAttribute("data-url");
+        middle.src = src;
+        bigImg.src = src;
+    }
+}
+
+
+    oBox.onmouseover = function(){
+	oFilter.style.display = "block";
+	max.style.display = "block";
+	this.onmousemove = function(e){
+
+		var e = e||event;
+		var l = e.clientX - 20 -  oFilter.offsetWidth/2;
+		var t = e.clientY - 60 -  oFilter.offsetHeight/2;
+
+		l = l>oBox.offsetWidth - oFilter.offsetWidth?oBox.offsetWidth - oFilter.offsetWidth:(l<0?0:l);
+
+
+		t = t >oBox.offsetHeight - oFilter.offsetHeight?oBox.offsetHeight - oFilter.offsetHeight:(t<0?0:t);
+
+
+
+		oFilter.style.left = l + "px";
+		oFilter.style.top = t +"px";
+
+		bigImg.style.left = -2*l +"px";
+		bigImg.style.top = -2*t +"px";
+	}
+	
+}
+
+
+
+
+}
+
+
+				
+	})	
+
+
+
+
+
+	
+
+
+</script>

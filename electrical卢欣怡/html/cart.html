@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/electrical.css" />
+		<script src="../js/cart.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/cart.css" />
+		<script src="../js/pool.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="cartHeader">
+			<div id="" class="shopHeader">
+				<img src="https://www.sundan.com/themes/shundian/images/cart_logo.png" />
+				<h3 class="shopName">我的购物车</h3>
+				<p class="shopContent">商品从门店或者发货，我们将尽快发货。门店自提订单，24小时内将提货码发送至您的手机，请您留意手机短信。由于市场变化及各种合理商业努力都难以控制的因素的影响，商城无法保证用户提交的订单希望购买的商品都有货；如用户拟购买的商品缺货，用户和商家都可取消订单。</p>
+			</div>
+			<div id="" class="myCart">
+				<img src="../img/myCart.png" />
+			</div>
+
+		</div>
+		<div id="cart" class="cart">
+			<table cellspacing="0" cellpadding="0" id="list">
+				<tr class="listTitle">
+					<th class="listFirst"><input type="checkbox" class="all" /></th>
+					<th>全选</th>
+					<th class="listSecond">商品名称</th>
+					<th>单价</th>
+					<th>优惠</th>
+					<th>数量</th>
+					<th>小计</th>
+					<th>积分</th>
+					<th>操作</th>
+				</tr>
+				<!--<tr>
+					<td class="listFirst"><input type="checkbox" class="single" value="" /></td>
+					<td colspan="2"><img src=""/><span></span><p><b><[减价]></b>下单立减200元，活动截止日期为2018/09/13</p></td>
+					<td>￥3888.00</td>
+					<td class="listFour">￥400.00</td>
+					<td class="listFive">
+						<div class="product">
+							
+					
+						<button>-</button><input  class="productNum" value="1" /><button>+</button><p>有货</p>	</div>
+					</td>
+					<td class="listSix">￥7376.00</td>
+					<td>-</td>
+					<td class="listEight"><button>收藏</button><button class="del">删除</button></td>
+				</tr>-->
+
+			</table>
+			<table cellspacing="0" cellpadding="0" id="listAll">
+				<tr class="listTitle">
+					<td class="listFirst"><input type="checkbox" class="all" value="" /></td>
+					<td>全选</td>
+					<td>凑单商品</td>
+					<td class="delAll">删除选中商品</td>
+					<td id="totalNum">共<span>4</span>件商品,已选择<span>4</span>件</td>
+					<td id="totalPrice">合计(不含运费):<span>￥13362.00</span>元</td>
+					<td>继续购物</td>
+					<td><button>去结算</button></td>
+				</tr>
+			</table>
+		</div>
+
+	</body>
+
+</html>
+<script type="text/javascript">
+	var obj = [{
+			img: "https://www.sundan.com/public/images/82/69/91/ca9b776d14fb7cf6d171c6d76b3cb6d6e38dfe23.jpg?1523347647#h",
+			content: "华为（HUAWEI）P20 6GB+128GB AI智慧全面屏 全网通 移动联通电信4G手机EML-AL00",
+			price: "￥3888.00",
+			discount: "￥400.00",
+			totalPrice: "￥3488.00"
+		},
+		{
+			img: "https://www.sundan.com/public/images/82/69/91/ca9b776d14fb7cf6d171c6d76b3cb6d6e38dfe23.jpg?1523347647#h",
+			content: "华为（HUAWEI）P20 6GB+128GB AI智慧全面屏 全网通 移动联通电信4G手机EML-AL00",
+			price: "￥3888.00",
+			discount: "￥400.00",
+			totalPrice: "￥3488.00"
+		},
+		{
+			img: "https://www.sundan.com/public/images/82/69/91/ca9b776d14fb7cf6d171c6d76b3cb6d6e38dfe23.jpg?1523347647#h",
+			content: "华为（HUAWEI）P20 6GB+128GB AI智慧全面屏 全网通 移动联通电信4G手机EML-AL00",
+			price: "￥3888.00",
+			discount: "￥400.00",
+			total: "￥3888.00",
+			totalPrice: "￥3488.00"
+		},
+		{
+			img: "https://www.sundan.com/public/images/82/69/91/ca9b776d14fb7cf6d171c6d76b3cb6d6e38dfe23.jpg?1523347647#h",
+			content: "华为（HUAWEI）P20 6GB+128GB AI智慧全面屏 全网通 移动联通电信4G手机EML-AL00",
+			price: "￥3888.00",
+			discount: "￥400.00",
+			total: "￥3888.00",
+			totalPrice: "￥3488.00"
+		},
+		{
+			img: "https://www.sundan.com/public/images/82/69/91/ca9b776d14fb7cf6d171c6d76b3cb6d6e38dfe23.jpg?1523347647#h",
+			content: "华为（HUAWEI）P20 6GB+128GB AI智慧全面屏 全网通 移动联通电信4G手机EML-AL00",
+			price: "￥3888.00",
+			discount: "￥400.00",
+			total: "￥3888.00",
+			totalPrice: "￥3488.00"
+		},
+		{
+			img: "https://www.sundan.com/public/images/82/69/91/ca9b776d14fb7cf6d171c6d76b3cb6d6e38dfe23.jpg?1523347647#h",
+			content: "华为（HUAWEI）P20 6GB+128GB AI智慧全面屏 全网通 移动联通电信4G手机EML-AL00",
+			price: "￥3888.00",
+			discount: "￥400.00",
+			total: "￥3888.00",
+			totalPrice: "￥3488.00"
+		},
+		{
+			img: "https://www.sundan.com/public/images/82/69/91/ca9b776d14fb7cf6d171c6d76b3cb6d6e38dfe23.jpg?1523347647#h",
+			content: "华为（HUAWEI）P20 6GB+128GB AI智慧全面屏 全网通 移动联通电信4G手机EML-AL00",
+			price: "￥3888.00",
+			discount: "￥400.00",
+			total: "￥3888.00",
+			totalPrice: "￥3488.00"
+		},
+		{
+			img: "https://www.sundan.com/public/images/82/69/91/ca9b776d14fb7cf6d171c6d76b3cb6d6e38dfe23.jpg?1523347647#h",
+			content: "华为（HUAWEI）P20 6GB+128GB AI智慧全面屏 全网通 移动联通电信4G手机EML-AL00",
+			price: "￥3888.00",
+			discount: "￥400.00",
+			total: "￥3888.00",
+			totalPrice: "￥3488.00"
+		}
+	]
+
+	var list = document.getElementById("list");
+	var str = "";
+
+	ajax({
+		type: "get",
+		url: "../product.json",
+		success: function(data) {
+			var data = JSON.parse(data);
+			for(var i = 0; i < data.length; i++) {
+				str += `<tr data-id = "${data[i].id}">
+					<td class="listFirst"><input type="checkbox" class="single" value="" /></td>
+					<td colspan="2"><img src="${obj[i].img}"/><span>${obj[i].content}</span><p><b><[减价]></b>下单立减200元，活动截止日期为2018/09/13</p></td>
+					<td>${obj[i].price}</td>
+					<td class="listFour">${obj[i].discount}</td>
+					<td class="listFive">
+						<div class="product">
+							
+					
+						<button class="reduce">-</button><input  class="productNum" value="${data[i].number}" /><button class="add">+</button><p>有货</p>	</div>
+					</td>
+					<td class="listSix">￥${parseInt(obj[i].price.slice(1))*data[i].number}</td>
+					<td>-</td>
+					<td class="listEight"><button>收藏</button><button class="del">删除</button></td>
+				</tr>`;
+			}
+			list.innerHTML += str;
+
+			var all = document.querySelectorAll(".all");
+			var cart = document.getElementById("cart");
+
+			var singleInput = document.querySelectorAll(".single")
+			for(var key in all) {
+				all[key].checked = "checked";
+			}
+			for(var key in singleInput) {
+				singleInput[key].checked = "checked";
+			}
+			cart.onclick = function(e) {
+				var e = e || event;
+				var target = e.target || e.srcElement;
+
+				if(target.className == "all") {
+
+					if(target.checked) {
+						for(var i = 0; i < singleInput.length; i++) {
+							singleInput[i].checked = "checked";
+						}
+					} else {
+						for(var i = 0; i < singleInput.length; i++) {
+							singleInput[i].checked = "";
+						}
+					}
+
+				}
+				var flag = true;
+				for(var i = 0; i < singleInput.length; i++) {
+					if(!singleInput[i].checked) {
+						flag = false;
+						break;
+					}
+				}
+				if(flag) {
+					all[0].checked = "checked";
+					all[1].checked = "checked";
+				} else {
+					all[0].checked = "";
+					all[1].checked = "";
+				}
+				if(target.className == "reduce") {
+					target.parentNode.parentNode.parentNode.children[0].children[0].checked = "checked";
+					var num = target.nextElementSibling;
+					if(num.value <= 1) {
+						num.value = 1;
+					} else {
+						num.value--;
+
+					}
+					var price = target.parentNode.parentNode.previousElementSibling.innerHTML.slice(1);
+					var discountNum = target.parentNode.parentNode.previousElementSibling.previousElementSibling.innerHTML.slice(1);
+					var totalPrice = target.parentNode.parentNode.nextElementSibling;
+					totalPrice.innerText = "￥" + (discountNum - price) * num.value + ".00";
+
+					ajax({
+						type: "get",
+						url: "http://localhost:9000/html/cart.html/addCart",
+						data: {
+							id: target.parentNode.parentNode.parentNode.getAttribute("data-id"),
+							number: num.value
+						},
+						success: function(data) {
+							var data = JSON.parse(data);
+							if(data.status == 1) {
+								alert("加入购物车成功");
+							} else if(data.status == 0) {
+								alert("加入购物车失败")
+							}
+						}
+					})
+
+				}
+				if(target.className == "add") {
+					target.parentNode.parentNode.parentNode.children[0].children[0].checked = "checked";
+					var num = target.previousElementSibling;
+					num.value++;
+					var price = target.parentNode.parentNode.previousElementSibling.innerHTML.slice(1);
+
+					var discountNum = target.parentNode.parentNode.previousElementSibling.previousElementSibling.innerHTML.slice(1);
+					var totalPrice = target.parentNode.parentNode.nextElementSibling;
+					totalPrice.innerText = "￥" + (discountNum - price) * num.value + ".00";
+
+					ajax({
+						type: "get",
+						url: "http://localhost:9000/html/cart.html/addCart",
+						data: {
+							id: target.parentNode.parentNode.parentNode.getAttribute("data-id"),
+							number: num.value
+						},
+						success: function(data) {
+							var data = JSON.parse(data);
+							if(data.status == 1) {
+								alert("加入购物车成功");
+							} else if(data.status == 0) {
+								alert("加入购物车失败")
+							}
+						}
+					})
+
+				}
+				if(target.className == "del") {
+
+					target.parentNode.parentNode.remove();
+					ajax({
+						type: "get",
+						url: "http://localhost:9000/html/cart.html/removeCart",
+						data: {
+							id: target.parentNode.parentNode.getAttribute("data-id")
+						},
+						success: function(data) {
+							var data = JSON.parse(data);
+							if(data.status == 1) {
+								alert("删除成功");
+							} else if(data.status == 0) {
+								alert("删除失败")
+							}
+						}
+					})
+				}
+				//		
+				if(target.className == "delAll") {
+					if(all[1].checked) {
+						target.parentNode.parentNode.parentNode.previousElementSibling.children[1].remove();	
+							ajax({
+								type: "get",
+								url: "http://localhost:9000/html/cart.html/removeAllCart",
+								success: function(data) {
+									var data = JSON.parse(data);
+									if(data.status == 1) {
+										alert("删除成功");
+									} else if(data.status == 0) {
+										alert("删除失败")
+									}
+								}
+							})
+
+
+					}
+					var  arr = [];
+					for(var i = 0; i < singleInput.length; i++) {
+						
+						if(singleInput[i].checked) {
+							singleInput[i].parentNode.parentNode.remove();
+							arr.push(singleInput[i].parentNode.parentNode.getAttribute("data-id"))
+							
+						}
+					}
+						ajax({
+								type: "get",
+								url: "http://localhost:9000/html/cart.html/removeSingleCart",
+								data:{
+									arr:arr
+								},
+								success: function(data) {
+									var data = JSON.parse(data);
+									if(data.status == 1) {
+										alert("删除成功");
+									} else if(data.status == 0) {
+										alert("删除失败")
+									}
+								}
+							})
+					
+				}
+
+				var aNum = document.querySelectorAll(".add")
+				var num = 0;
+				var sum = 0;
+				var tNum = 0;
+				for(var i = 0; i < aNum.length; i++) {
+					if(aNum[i].parentNode.parentNode.parentNode.children[0].children[0].checked) {
+						num += Number(aNum[i].previousElementSibling.value);
+						sum += Number(aNum[i].parentNode.parentNode.nextElementSibling.innerText.slice(1));
+					}
+					tNum += Number(aNum[i].previousElementSibling.value);
+				}
+				var totalNum = document.getElementById("totalNum");
+				var totalPrice = document.getElementById("totalPrice");
+
+				totalNum.innerText = "共" + tNum + "件商品，已选择" + num + "件";
+				totalPrice.firstElementChild.innerText = "￥" + sum + ".00";
+
+			}
+
+		}
+	})
+</script>

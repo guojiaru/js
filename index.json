@@ -1,0 +1,32 @@
+[
+	{
+        "id": "01",
+        "title": "新商贸易公司",
+        "pirce": "81.03",
+        "img": "img/salemain1.jpg"
+    }, {
+        "id": "02",
+        "title": "广州佩雪叶电子商务有限公司",
+        "pirce": "64.38",
+        "img": "img/salemain2.jpg"
+    }, {
+        "id": "03",
+        "title": "麦秀 ",
+        "pirce": "72.83",
+        "img": "img/salemain3.jpg"
+    }, {
+        "id": "04",
+        "title": "韩国定制",
+        "pirce": "￥55.89",
+        "img": "img/salemain4.jpg"
+    }, {
+        "id": "05",
+        "title": "索尼娅",
+        "pirce": "21.34",
+        "img": "img/salemain5.jpg"
+    }, {
+        "id": "06",
+        "title": "深圳市龙岗区青非服饰厂",
+        "pirce": "44.97",
+        "img": "img/salemain6.jpg"
+    }]
